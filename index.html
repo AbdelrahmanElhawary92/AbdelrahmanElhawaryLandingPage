@@ -3,271 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdelrahman Elhawary | Mechatronics & Embedded Systems Engineer</title>
+  <title>Abdelrahman Elhawary | Electronics & PCB Design Engineer</title>
+
   <style>
     @keyframes fadeInUp {
-      0% {opacity: 0; transform: translateY(40px);} 
-      100% {opacity: 1; transform: translateY(0);} 
+      0% {opacity: 0; transform: translateY(40px);}
+      100% {opacity: 1; transform: translateY(0);}
     }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #0a0a0a;
       color: #e0e0e0;
-      scroll-behavior: smooth;
     }
+
     header {
       background: linear-gradient(90deg, #0a0a0a, #001f3f);
       padding: 3rem 1rem;
       text-align: center;
       animation: fadeInUp 1s ease forwards;
     }
+
     header img {
       width: 140px;
       height: 140px;
       border-radius: 50%;
       border: 3px solid #00bfff;
-      object-fit: cover;
-      background-color: #fff;
       margin-bottom: 1rem;
     }
-    header h1 {color: #00bfff; font-size: 2.8rem; margin: 0;}
-    header h2 {font-weight: 400; color: #dcdcdc; margin-top: 0.5rem;}
-    section {
-      max-width: 1100px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      opacity: 0;
-      transform: translateY(40px);
-      animation: fadeInUp 1s ease forwards;
-    }
-    section:nth-of-type(2) {animation-delay: 0.3s;}
-    section:nth-of-type(3) {animation-delay: 0.6s;}
-    section:nth-of-type(4) {animation-delay: 0.9s;}
-    section:nth-of-type(5) {animation-delay: 1.2s;}
-    h3 {
-      color: #00bfff;
-      border-bottom: 2px solid #00bfff;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-    p {line-height: 1.8; color: #ccc;}
-    .highlight {color: #00bfff; font-weight: bold;}
+
+    header h1 { color: #00bfff; font-size: 2.6rem; margin: 0; }
+    header h2 { font-weight: 400; color: #dcdcdc; margin-top: .5rem; }
+
     .btn {
       display: inline-block;
-      padding: 0.8rem 1.5rem;
-      margin: 0.5rem;
+      padding: .8rem 1.5rem;
+      margin: .5rem;
       background-color: #00bfff;
       color: #000;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.3s;
-      text-align: center;
+      transition: .3s;
     }
-    .btn:hover {background-color: #008fcc;}
-    ul {list-style: none; padding-left: 1rem;}
-    li {margin-bottom: 0.8rem;}
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
+
+    .btn:hover { background-color: #008fcc; }
+
+    section {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      animation: fadeInUp 1s ease forwards;
     }
-    input, textarea, select {
-      padding: 0.8rem;
-      border-radius: 6px;
+
+    h3 {
+      color: #00bfff;
+      border-bottom: 2px solid #00bfff;
+      padding-bottom: .5rem;
+    }
+
+    ul { list-style: none; padding-left: 0; }
+    li { margin-bottom: .8rem; }
+
+    iframe {
+      width: 100%;
+      height: 420px;
+      border-radius: 12px;
       border: none;
-      background-color: #1b1b1b;
-      color: #e0e0e0;
-      font-size: 1rem;
-      outline: none;
     }
-    input:focus, textarea:focus, select:focus {border: 1px solid #00bfff;}
-    textarea {min-height: 120px; resize: vertical;}
-    .submit-btn {
-      background-color: #00bfff;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      padding: 1rem;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    .submit-btn:hover {background-color: #008fcc;}
+
     footer {
-      background-color: #000;
+      background: #000;
       text-align: center;
       padding: 2rem 1rem;
-      margin-top: 4rem;
       color: #999;
-      font-size: 0.9rem;
     }
-    .footer-social {margin: 1rem 0;}
+
     .footer-social a {
       color: #00bfff;
-      margin: 0 0.8rem;
+      margin: 0 .8rem;
       text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
     }
-    .footer-social a:hover {color: #008fcc;}
   </style>
 </head>
+
 <body>
-  
+
 <header>
   <img src="ae.png" alt="Abdelrahman Elhawary">
   <h1>Abdelrahman Elhawary</h1>
-  <h2>Mechatronics & Embedded Systems Engineer | Cyber Security Consultant | Instructor | German C2 | Top Rated Plus on Upwork</h2>
+  <h2>Electronics & PCB Design Engineer</h2>
+
+  <a class="btn" href="#portfolio">Portfolio</a>
+  <a class="btn" href="#video">Video Intro</a>
+  <a class="btn" href="https://www.upwork.com/" target="_blank">Hire Me on Upwork</a>
 </header>
 
+<section id="about">
+  <h3>About Me</h3>
+  <p>
+    I’m a <b>specialized Electronics & PCB Design Engineer</b> focused on building
+    <b>production-ready hardware</b> for automotive, industrial, and power electronics applications.
+  </p>
+  <p>
+    My work covers the complete hardware lifecycle:
+    requirements → schematic → PCB layout → prototyping → testing → manufacturing support.
+  </p>
+</section>
 
-  <section id="about-me">
-    <h3>About Me</h3>
-    <p>
-      I’m <span class="highlight">Abdelrahman Elhawary</span>, a professional <span class="highlight">Mechatronics & Embedded Systems Engineer</span> with extensive experience delivering production-ready electronic systems from concept to manufacturing.
-    </p>
-    <p>
-      My core strength is <span class="highlight">hardware engineering (PCB & electronics)</span> combined with robust <span class="highlight">embedded software development</span>, enabling fully integrated, reliable systems for robotics, drones, medical devices, automotive, industrial control systems, and IoT.
-    </p>
-    <p>
-      I also specialize in <span class="highlight">IT security, SOC operations, vulnerability management, and penetration testing</span>, bridging hardware, embedded systems, and security.
-    </p>
-    <p>I design complete systems that are secure, testable, and ready for production.</p>
-  </section>
-
-  <section id="services">
-    <h3>Core Services & Expertise</h3>
-    <ul>
-      <li>⚡ End-to-End Electronic System Design: Architecture, schematic, PCB, firmware, testing, and manufacturing support</li>
-      <li>🔌 Power Electronics & BMS: High-current, low-noise, efficient designs</li>
-      <li>🚗 Automotive & Industrial Electronics: CAN-based ECUs, real-time control, safety-oriented designs</li>
-      <li>🤖 Robotics & Autonomous Systems: ROS, ArduPilot, motor control, multi-sensor fusion, drones & mobile robots</li>
-      <li>🩺 Medical & Wearable Electronics: ECG, EEG, IMU, biosignal acquisition, low-noise & safety-aware design</li>
-      <li>📡 IoT & Wireless Embedded Systems: Low-power ESP32/STM32, cloud-connected devices</li>
-      <li>🛡️ Security & Penetration Testing: SOC & incident response, vulnerability assessments, controlled pentesting, Azure IAM/PAM</li>
-      <li>📐 Mechanical & Enclosure Integration: 3D PCB design, enclosure fit, SolidWorks integration</li>
-    </ul>
-    <a href="#book" class="btn" onclick="document.getElementById('type').value='Project'">Start a Project</a>
-    <a href="#book" class="btn" onclick="document.getElementById('type').value='Consultation'">Book a Call</a>
-  </section>
-
-  <section id="tools">
-    <h3>Tools & Skills</h3>
-    <ul>
-      <li>PCB Design: Altium Designer, KiCad, Eagle, EasyEDA | High-speed & high-current multilayer boards, signal/power integrity, 3D PCB visualization</li>
-      <li>Embedded Systems: STM32, ESP32, ARM | RTOS, Bare-metal, C/C++, Python, Rust, MATLAB</li>
-      <li>Interfaces & Protocols: CAN, SPI, I2C, UART, USB, Ethernet</li>
-      <li>Robotics & Autonomy: ROS, ArduPilot, sensor fusion, motor control</li>
-      <li>Web, Security & Cloud: Embedded security, SIEM, vulnerability management, cloud-connected devices</li>
-      <li>Simulation & Validation: LTspice, Proteus, Multisim, COMSOL</li>
-      <li>Languages: German C2, English C1, Arabic Native</li>
-    </ul>
-  </section>
-  
-<section id="certifications">
-  <h3>Certifications & Professional Credentials</h3>
+<section id="services">
+  <h3>Core Services</h3>
   <ul>
-    <!-- Networking Certifications -->
-    <li>🔹 Cisco Certified Network Associate (CCNA)</li>
-    <li>🔹 Cisco Certified Network Professional (CCNP)</li>
-    <li>🔹 Cisco Certified Internetwork Expert (CCIE)</li>
-
-    <!-- Language -->
-    <li>🔹 German C2 Language Certificate</li>
-
-    <!-- Security / Pentesting / Cloud -->
-    <li>🔹 Offensive Security Certified Professional (OSCP)</li>
-    <li>🔹 LPT Master – Licensed Penetration Tester</li>
-    <li>🔹 GPEN – GIAC Penetration Tester</li>
-    <li>🔹 CISSP – Certified Information Systems Security Professional</li>
-    <li>🔹 CCSP – Certified Cloud Security Professional</li>
-    <li>🔹 CompTIA Security+</li>
-    <li>🔹 Microsoft Certified: Azure Security Engineer Associate</li>
-    <li>🔹 Microsoft Certified: Security Operations Analyst Associate</li>
-    <li>🔹 Splunk Core Certified User</li>
-    <li>🔹 CompTIA CySA+ (Cybersecurity Analyst)</li>
-
-    <!-- Project Management -->
-    <li>🔹 PMP – Project Management Professional</li>
-
-    <!-- Mechatronics / Industrial Automation -->
-    <li>🔹 Siemens Mechatronic Systems Certification Program (SMSCP) – Level 3
-    </li>
-
-    <!-- AI / Autonomous / Robotics / Embedded -->
-    <li>🔹 IPC CID+ – Certified Interconnect Designer</li>
-    <li>📘 Google Professional Machine Learning Engineer Certification</li>
-    <li>📘 Self-Driving Car Engineer Nanodegree (Udacity)</li>
-    <li>📘 Flying Car & Autonomous Flight Engineer Nanodegree (Udacity)</li>
-    <li>📘 Vector Embedded Professional (Training Program)</li>
-    <li>📘 Advanced ROS2 Development – Certificate of Completion</li>
+    <li>⚡ PCB Design (2–8 layers, high-current, EMI-aware)</li>
+    <li>🔋 Power Electronics & Battery Management Systems</li>
+    <li>🚗 Automotive Electronics (CAN-based ECUs)</li>
+    <li>🏭 Industrial Control & Embedded Hardware</li>
+    <li>🧪 Design Review, Debugging & DFM/DFA</li>
   </ul>
 </section>
 
+<section id="portfolio">
+  <h3>Selected Hardware Portfolio</h3>
+  <ul>
+    <li>✔ Automotive ECU PCB with CAN & protection circuits</li>
+    <li>✔ High-current BMS board (monitoring & safety)</li>
+    <li>✔ Industrial motor driver & power stage</li>
+    <li>✔ Low-noise medical wearable PCB</li>
+    <li>✔ Low-power IoT data acquisition board</li>
+  </ul>
+</section>
 
+<section id="video">
+  <h3>Video Introduction</h3>
+  <p>Short introduction explaining my hardware expertise and how I work with clients.</p>
+  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
+</section>
 
+<section id="upwork">
+  <h3>Hire Me on Upwork</h3>
+  <p>
+    I work with international clients as a <b>Senior PCB & Electronics Engineer</b>,
+    delivering reliable, manufacturable designs.
+  </p>
+  <a class="btn" href="https://www.upwork.com/" target="_blank">
+    View My Upwork Profile
+  </a>
+</section>
 
+<footer>
+  <div class="footer-social">
+    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a>
+    <a href="https://www.upwork.com/" target="_blank">Upwork</a>
+  </div>
+  © 2025 Abdelrahman Elhawary | Electronics & PCB Design Engineer
+</footer>
 
-
-  <section id="projects">
-    <h3>Selected Project Experience</h3>
-    <ul>
-      <li>Automotive ECU PCB – CAN communication & real-time control</li>
-      <li>High-Current BMS Board – Battery monitoring & protection</li>
-      <li>AI-Enhanced Robot Controller – Multi-sensor fusion & motor control</li>
-      <li>Medical Wearable PCB – Biosignal acquisition & low-noise analog front-end</li>
-      <li>Low-Power IoT PCB – Wireless sensor network</li>
-      <li>SOC & Pen Testing Projects – Incident analysis, vulnerability assessments, Azure IAM/PAM</li>
-    </ul>
-  </section>
-
-  <section id="book">
-    <h3>Contact / Book a Service</h3>
-    <form action="YOUR_BACKEND_SCRIPT.php" method="POST">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="type">Service Type</label>
-      <select id="type" name="type" required>
-        <option value="">-- Select --</option>
-        <option value="Project">Project</option>
-        <option value="Consultation">Consultation</option>
-      </select>
-
-      <label for="service">Select Service</label>
-      <select id="service" name="service" required>
-        <option value="">-- Choose a Service --</option>
-        <option>PCB Layout & Schematic</option>
-        <option>Embedded Firmware & RTOS</option>
-        <option>ROS/ArduPilot Integration</option>
-        <option>AI/ML Embedded Solutions</option>
-        <option>IoT & Wireless PCB</option>
-        <option>Power Electronics & BMS</option>
-        <option>Automotive Electronics</option>
-        <option>Medical Electronics</option>
-        <option>Security & Penetration Testing</option>
-      </select>
-
-      <label for="message">Project Details</label>
-      <textarea id="message" name="message" placeholder="Describe your project..." required></textarea>
-
-      <button type="submit" class="submit-btn">Submit Request</button>
-    </form>
-  </section>
-
-  <footer>
-    <div class="footer-social">
-      <a href="#" target="_blank">LinkedIn</a>
-      <a href="#" target="_blank">GitHub</a>
-      <a href="#" target="_blank">Upwork</a>
-    </div>
-    © 2025 Abdelrahman Elhawary | Mechatronics & Embedded Systems Engineer | Top Rated Plus on Upwork
-  </footer>
 </body>
 </html>
