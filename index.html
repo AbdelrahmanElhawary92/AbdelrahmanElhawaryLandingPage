@@ -2,175 +2,1256 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Embedded & Electronics Engineer | Production-Ready PCB + Firmware</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdelrahman Elhawary | German-Speaking Embedded & Hardware Systems Expert</title>
+  <meta
+    name="description"
+    content="German-speaking Embedded & Electronics Engineer. PCB design (2–8 layers), power electronics, firmware (C/C++/RTOS), bring-up/testing, DFM/DFA and production support."
+  />
+  <meta name="theme-color" content="#0b1220" />
 
   <style>
-    @keyframes fadeInUp {
-      0% {opacity: 0; transform: translateY(40px);}
-      100% {opacity: 1; transform: translateY(0);}
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1a2e;
+      --panel2:#0b162a;
+      --text:#e6eaf2;
+      --muted:#aab4c5;
+      --line:#23314d;
+      --brand:#3b82f6;
+      --brand2:#22c55e;
+      --warn:#f59e0b;
+      --danger:#ef4444;
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius2: 12px;
+      --max: 1120px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0a0a0a;
-      color: #e0e0e0;
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      background: radial-gradient(1200px 600px at 15% 10%, rgba(59,130,246,.20), transparent 60%),
+                  radial-gradient(900px 500px at 80% 20%, rgba(34,197,94,.14), transparent 55%),
+                  radial-gradient(900px 500px at 30% 80%, rgba(245,158,11,.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height:1.6;
     }
 
-    header {
-      background: linear-gradient(90deg, #0a0a0a, #001f3f);
-      padding: 3rem 1rem;
-      text-align: center;
-      animation: fadeInUp 1s ease forwards;
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ max-width: var(--max); margin:0 auto; padding: 0 20px; }
+
+    /* Top bar */
+    .topbar{
+      position: sticky;
+      top:0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.72);
+      border-bottom: 1px solid rgba(35,49,77,.65);
     }
-
-    header img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid #00bfff;
-      margin-bottom: 1rem;
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 0;
+      gap: 12px;
     }
-
-    header h1 { color: #00bfff; font-size: 2.6rem; margin: 0; }
-    header h2 { font-weight: 400; color: #dcdcdc; margin-top: .5rem; }
-
-    .btn {
-      display: inline-block;
-      padding: .8rem 1.5rem;
-      margin: .5rem;
-      background-color: #00bfff;
-      color: #000;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: .3s;
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight: 700;
+      letter-spacing:.2px;
     }
-
-    .btn:hover { background-color: #008fcc; }
-
-    section {
-      max-width: 1100px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      animation: fadeInUp 1s ease forwards;
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 0 4px rgba(59,130,246,.15);
     }
-
-    h3 {
-      color: #00bfff;
-      border-bottom: 2px solid #00bfff;
-      padding-bottom: .5rem;
+    .nav{
+      display:flex; gap: 14px; flex-wrap:wrap;
+      align-items:center;
     }
-
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: .8rem; }
-
-    iframe {
-      width: 100%;
-      height: 420px;
+    .nav a{
+      color: var(--muted);
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+    }
+    .nav a:hover{
+      color: var(--text);
+      border-color: rgba(35,49,77,.7);
+      background: rgba(15,26,46,.55);
+    }
+    .right{
+      display:flex; align-items:center; gap: 10px;
+    }
+    .lang{
+      display:flex; gap: 8px;
+      padding: 6px;
+      border: 1px solid rgba(35,49,77,.75);
       border-radius: 12px;
-      border: none;
+      background: rgba(15,26,46,.55);
+    }
+    .lang button{
+      cursor:pointer;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      padding: 7px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .lang button.active{
+      color: var(--text);
+      border-color: rgba(59,130,246,.55);
+      background: rgba(59,130,246,.12);
     }
 
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #999;
+    /* Hero */
+    .hero{
+      padding: 46px 0 18px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 26px;
+      align-items: center;
+    }
+    .pillrow{
+      display:flex; flex-wrap:wrap; gap: 10px; margin-bottom: 14px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+      border: 1px solid rgba(35,49,77,.75);
+      background: rgba(15,26,46,.55);
+    }
+    .pill strong{ color: var(--text); font-weight:700; }
+    .h1{
+      font-size: 42px;
+      line-height: 1.12;
+      margin: 0 0 14px;
+      letter-spacing: -0.5px;
+    }
+    .lead{
+      color: var(--muted);
+      font-size: 17px;
+      margin: 0 0 18px;
+      max-width: 62ch;
+    }
+    .cta{
+      display:flex;
+      gap: 12px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top: 16px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(35,49,77,.75);
+      background: rgba(15,26,46,.55);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 14px;
+      cursor:pointer;
+      transition: transform .08s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn:hover{ background: rgba(15,26,46,.85); border-color: rgba(59,130,246,.45); }
+    .btn:active{ transform: translateY(1px); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(59,130,246,.72));
+      border-color: rgba(59,130,246,.55);
+      box-shadow: 0 14px 35px rgba(59,130,246,.18);
+    }
+    .btn.primary:hover{ filter: brightness(1.03); }
+    .btn.success{
+      background: linear-gradient(135deg, rgba(34,197,94,.92), rgba(34,197,94,.68));
+      border-color: rgba(34,197,94,.55);
+      box-shadow: 0 14px 35px rgba(34,197,94,.14);
     }
 
-    .footer-social a {
-      color: #00bfff;
-      margin: 0 .8rem;
-      text-decoration: none;
+    .card{
+      background: linear-gradient(180deg, rgba(15,26,46,.75), rgba(11,22,42,.55));
+      border: 1px solid rgba(35,49,77,.75);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .profile{
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 110px 1fr;
+      gap: 14px;
+      align-items:center;
+    }
+    .avatar{
+      width: 110px; height: 110px;
+      border-radius: 16px;
+      border: 1px solid rgba(35,49,77,.85);
+      overflow:hidden;
+      background: rgba(2,6,23,.35);
+    }
+    .avatar img{
+      width:100%; height:100%;
+      object-fit: cover;
+      display:block;
+    }
+    .pname{ font-weight:800; margin:0; font-size:16px; }
+    .psub{ margin:4px 0 8px; color: var(--muted); font-size: 13px; }
+    .pmeta{
+      display:flex; flex-wrap:wrap; gap: 8px;
+      color: var(--muted); font-size: 12.5px;
+    }
+    .badge{
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(35,49,77,.75);
+      background: rgba(15,26,46,.55);
+    }
+
+    /* Sections */
+    section{ padding: 34px 0; }
+    .sec-head{
+      display:flex; justify-content:space-between; align-items:flex-end;
+      gap: 10px; flex-wrap:wrap;
+      margin-bottom: 14px;
+    }
+    .sec-title{
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -0.2px;
+    }
+    .sec-note{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .grid3{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+    .box{ padding: 16px; border-radius: var(--radius); border: 1px solid rgba(35,49,77,.75); background: rgba(15,26,46,.55); }
+    .box h4{ margin: 0 0 8px; font-size: 15px; letter-spacing: -0.1px; }
+    .box p{ margin: 0; color: var(--muted); font-size: 13.5px; }
+
+    .list{
+      margin:0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    .list li{ margin: 7px 0; }
+
+    .kpi{
+      display:flex; gap: 10px; flex-wrap:wrap;
+      margin-top: 12px;
+    }
+    .kpi .badge{ font-family: var(--mono); }
+
+    .project{
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(35,49,77,.75);
+      background: linear-gradient(180deg, rgba(15,26,46,.65), rgba(11,22,42,.52));
+    }
+    .project .top{
+      display:flex; justify-content:space-between; gap:10px; align-items:flex-start;
+      margin-bottom: 8px;
+    }
+    .project h4{ margin:0; font-size: 15px; }
+    .tagrow{ display:flex; gap:8px; flex-wrap:wrap; }
+    .tag{
+      font-size: 12px;
+      color: var(--muted);
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(35,49,77,.75);
+      background: rgba(15,26,46,.55);
+    }
+    .project p{ margin: 8px 0 0; color: var(--muted); font-size: 13.5px; }
+
+    .quote{
+      position: relative;
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(35,49,77,.75);
+      background: rgba(15,26,46,.55);
+    }
+    .quote p{ margin: 0 0 10px; color: var(--muted); font-size: 13.5px; }
+    .quote .by{ font-weight: 800; font-size: 13px; margin: 0; }
+    .quote:before{
+      content: "“";
+      position:absolute;
+      top: -10px; left: 12px;
+      font-size: 46px;
+      color: rgba(59,130,246,.35);
+      font-family: Georgia, serif;
+    }
+
+    /* Contact */
+    .contact{ padding: 18px; }
+    .form-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    label{
+      display:block;
+      font-size: 12.5px;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    input, select, textarea{
+      width:100%;
+      padding: 11px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(35,49,77,.85);
+      background: rgba(2,6,23,.25);
+      color: var(--text);
+      outline: none;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(59,130,246,.65);
+      box-shadow: 0 0 0 4px rgba(59,130,246,.15);
+    }
+    .full{ grid-column: 1 / -1; }
+    .form-actions{
+      display:flex; gap: 10px; flex-wrap:wrap; align-items:center;
+      margin-top: 10px;
+    }
+    .hint{
+      color: var(--muted);
+      font-size: 12.5px;
+      margin-top: 10px;
+    }
+    .toast{
+      display:none;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(34,197,94,.55);
+      background: rgba(34,197,94,.10);
+      color: #c9f7dc;
+      font-size: 13px;
+    }
+    .toast.err{
+      border-color: rgba(239,68,68,.55);
+      background: rgba(239,68,68,.10);
+      color: #ffd1d1;
+    }
+
+    /* Footer */
+    footer{
+      padding: 26px 0 40px;
+      border-top: 1px solid rgba(35,49,77,.55);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .foot{
+      display:flex; justify-content:space-between; align-items:center;
+      gap: 14px; flex-wrap:wrap;
+    }
+    .mini{
+      display:flex; gap: 10px; flex-wrap:wrap; align-items:center;
+      color: var(--muted);
+    }
+    .mini a{
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(35,49,77,.65);
+      background: rgba(15,26,46,.35);
+    }
+    .mini a:hover{ border-color: rgba(59,130,246,.45); color: var(--text); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+      .form-grid{ grid-template-columns: 1fr; }
+      .nav{ display:none; }
     }
   </style>
 </head>
 
 <body>
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <span class="dot"></span>
+        <span id="navBrand">Embedded & Electronics Engineer</span>
+      </div>
 
-<header>
-  <img src="ae.png" alt="Abdelrahman Elhawary">
-  <h1>Abdelrahman Elhawary</h1>
-  <h2>German-Speaking Embedded & Hardware Systems Expert</h2>
+      <nav class="nav" aria-label="Primary">
+        <a href="#services" id="navServices">Services</a>
+        <a href="#projects" id="navProjects">Projects</a>
+        <a href="#cred" id="navCred">Credentials</a>
+        <a href="#contact" id="navContact">Request</a>
+      </nav>
 
-  <a class="btn" href="#portfolio">Portfolio</a>
-  <a class="btn" href="#video">Video Intro</a>
-  <a class="btn" href="https://www.upwork.com/" target="_blank">Hire Me on Upwork</a>
-</header>
-
-<section id="about">
-  <h3>About Me</h3>
-  <p>
-    I’m a <b>German-speaking Embedded & Hardware Systems Expert</b> focused on building
-    <b>secure, production-ready embedded products</b>.
-  </p>
-  <p>
-    My expertise spans electronics design, embedded firmware, robotics,
-    and connected systems — with hands-on experience in
-    <b>cybersecurity fundamentals and cloud-connected device architectures</b>.
-  </p>
-</section>
-
-<section id="services">
-  <h3>Core Services</h3>
-  <ul>
-    <li>⚡ PCB Design (2–8 layers, high-current, EMI/EMC-aware)</li>
-    <li>🔋 Power Electronics & Battery Management Systems (BMS)</li>
-    <li>🧠 Embedded Firmware Development (C / C++ / RTOS)</li>
-    <li>🤖 Robotics Software & Integration (ROS1 / ROS2)</li>
-    <li>🚁 UAV & Autopilot Systems (ArduPilot, PX4)</li>
-    <li>🚗 Automotive Electronics & ECUs (CAN, LIN)</li>
-    <li>🏥 Medical Electronics (low-noise, safety-oriented design)</li>
-    <li>🌐 IoT Devices & Edge Systems</li>
-    <li>🔐 Embedded & IoT Security (secure boot, encryption basics)</li>
-    <li>☁️ Cloud Connectivity (Microsoft Azure IoT fundamentals)</li>
-    <li>🧪 Debugging, Design Review, DFM/DFA & Production Support</li>
-  </ul>
-</section>
-
-<section id="portfolio">
-  <h3>Selected Project Portfolio</h3>
-  <ul>
-    <li>✔ Automotive ECU with CAN & protection circuits</li>
-    <li>✔ High-current BMS with safety monitoring</li>
-    <li>✔ Secure IoT device connected to Azure IoT Hub</li>
-    <li>✔ UAV control system integrated with ArduPilot</li>
-    <li>✔ ROS-based robotic system (ROS1 / ROS2)</li>
-    <li>✔ Medical wearable PCB with low-noise analog design</li>
-  </ul>
-</section>
-
-<section id="video">
-  <h3>Video Introduction</h3>
-  <p>
-    Introduction covering embedded hardware, firmware, robotics,
-    and secure cloud-connected systems.
-  </p>
-  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
-</section>
-
-<section id="upwork">
-  <h3>Hire Me on Upwork</h3>
-  <p>
-    I work with international clients as a
-    <b>Senior Embedded & Hardware Systems Engineer</b>,
-    delivering reliable and manufacturable solutions.
-  </p>
-  <a class="btn" href="https://www.upwork.com/" target="_blank">
-    View My Upwork Profile
-  </a>
-</section>
-
-<footer>
-  <div class="footer-social">
-    <a href="#">LinkedIn</a>
-    <a href="#">GitHub</a>
-    <a href="https://www.upwork.com/" target="_blank">Upwork</a>
+      <div class="right">
+        <div class="lang" role="group" aria-label="Language switch">
+          <button id="btnEN" class="active" type="button" onclick="setLang('en')">EN</button>
+          <button id="btnDE" type="button" onclick="setLang('de')">DE</button>
+        </div>
+      </div>
+    </div>
   </div>
-  © 2026 Abdelrahman Elhawary | Embedded & Hardware Systems Expert
-</footer>
 
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="pillrow">
+            <!-- Removed German C1 pill content (kept layout) -->
+            <div class="pill"><strong id="pill1">German-speaking</strong></div>
+            <div class="pill"><strong id="pill2">Production-ready</strong> <span id="pill2b">PCB + Firmware</span></div>
+            <div class="pill"><strong id="pill3">Focus</strong> <span id="pill3b">Reliability • EMI/EMC • DFM/DFA</span></div>
+          </div>
+
+          <h1 class="h1" id="heroTitle">Embedded & Electronics Engineering for Production-Ready Systems</h1>
+          <p class="lead" id="heroLead">
+            I deliver reliable embedded hardware solutions — from concept and schematic design to PCB layout, firmware, bring-up,
+            testing, and manufacturing support. Built for real-world constraints, not just prototypes.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" id="btnUpwork" href="https://www.upwork.com/" target="_blank" rel="noopener">
+              <span>Hire me on Upwork</span> <span aria-hidden="true">→</span>
+            </a>
+            <a class="btn success" href="#contact" id="btnRequest">
+              <span id="btnRequestText">Request a Quote / Consultation</span> <span aria-hidden="true">✦</span>
+            </a>
+            <a class="btn" href="#projects" id="btnSeeWork">
+              <span id="btnSeeWorkText">See Work</span> <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="kpi">
+            <span class="badge" id="kpi1">6+ years experience</span>
+            <span class="badge" id="kpi2">PCB 2–8 layers</span>
+            <span class="badge" id="kpi3">C / C++ / RTOS</span>
+            <span class="badge" id="kpi4">Bring-up & Testing</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="profile">
+            <div class="avatar">
+              <img src="ae.png" alt="Profile photo" />
+            </div>
+            <div>
+              <p class="pname" id="pName">Abdelrahman — Embedded & Electronics Engineer</p>
+              <p class="psub" id="pSub">PCB Design • Power Electronics • Firmware • Bring-up & Production Support</p>
+              <div class="pmeta">
+                <!-- Removed badges: German C1 + IPC CID+ -->
+                <span class="badge" id="meta3">Automotive • Industrial • IoT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" style="margin: 0 18px 18px;">
+            <h4 id="boxFastTitle">Fast start, clear deliverables</h4>
+            <p id="boxFastText">
+              You get a structured handover package: schematic + PCB + BOM + manufacturing files, firmware repo, bring-up notes,
+              and test results — ready for production.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="servicesTitle">Core Services</h2>
+        <p class="sec-note" id="servicesNote">Specialized embedded electronics — focused, reliable, production-ready.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="box">
+          <h4 id="svc1t">PCB & Hardware Design</h4>
+          <ul class="list" id="svc1l">
+            <li>2–8 layer PCB layout, EMI/EMC-aware routing</li>
+            <li>High-current & power distribution</li>
+            <li>Schematic design & component selection</li>
+            <li>Manufacturing outputs: BOM, Gerbers, Pick&Place</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h4 id="svc2t">Power Electronics & Battery</h4>
+          <ul class="list" id="svc2l">
+            <li>Buck/Boost/LDO design & validation</li>
+            <li>Battery monitoring, protection, current sensing</li>
+            <li>Thermal and safety-oriented design choices</li>
+            <li>Noise/ripple control and robust power-up behavior</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h4 id="svc3t">Firmware + Bring-Up + Testing</h4>
+          <ul class="list" id="svc3l">
+            <li>Embedded C/C++ (bare-metal, RTOS basics)</li>
+            <li>Drivers: SPI, I2C, UART, CAN</li>
+            <li>SWD/JTAG debugging, oscilloscope/logic analyzer</li>
+            <li>Bring-up checklist, test plan, production support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="processTitle">How We Work</h2>
+        <p class="sec-note" id="processNote">Simple process. Clear milestones. Predictable delivery.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="box">
+          <h4 id="p1t">1) Requirements & Architecture</h4>
+          <p id="p1p">
+            We align on requirements, constraints (cost, size, power, compliance), and define interfaces and test criteria.
+          </p>
+        </div>
+        <div class="box">
+          <h4 id="p2t">2) Schematic + Design Review</h4>
+          <p id="p2p">Schematic design, component selection, and review for reliability, safety, and manufacturability.</p>
+        </div>
+        <div class="box">
+          <h4 id="p3t">3) PCB Layout + Manufacturing Package</h4>
+          <p id="p3p">Layout, DRC/DFM checks, then delivery of Gerbers, BOM, Pick&Place, and assembly notes.</p>
+        </div>
+        <div class="box">
+          <h4 id="p4t">4) Firmware + Bring-Up + Testing</h4>
+          <p id="p4p">
+            Firmware drivers, hardware bring-up, debugging, and test report. Support through production issues if needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="projectsTitle">Selected Project Types</h2>
+        <p class="sec-note" id="projectsNote">Representative examples — can be adapted to your product.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="project">
+          <div class="top">
+            <h4 id="pr1t">Industrial Sensor Interface Board</h4>
+            <div class="tagrow">
+              <span class="tag">Analog Front-End</span>
+              <span class="tag">RS485 / CAN</span>
+            </div>
+          </div>
+          <p id="pr1p">Low-noise sensing, robust filtering, and industrial comms with validation and test notes for field reliability.</p>
+        </div>
+
+        <div class="project">
+          <div class="top">
+            <h4 id="pr2t">Power & Battery Management Board</h4>
+            <div class="tagrow">
+              <span class="tag">Buck/Boost</span>
+              <span class="tag">Protection</span>
+            </div>
+          </div>
+          <p id="pr2p">Power tree design, current sensing, protections, and EMI-aware layout suitable for production constraints.</p>
+        </div>
+
+        <div class="project">
+          <div class="top">
+            <h4 id="pr3t">Embedded Controller (MCU + I/O)</h4>
+            <div class="tagrow">
+              <span class="tag">C/C++</span>
+              <span class="tag">RTOS</span>
+            </div>
+          </div>
+          <p id="pr3p">MCU board + firmware drivers, logs, error handling, and structured bring-up process with test checklist.</p>
+        </div>
+
+        <div class="project">
+          <div class="top">
+            <h4 id="pr4t">Automotive ECU Prototype</h4>
+            <div class="tagrow">
+              <span class="tag">CAN/LIN</span>
+              <span class="tag">Robust Power</span>
+            </div>
+          </div>
+          <p id="pr4p">Automotive-grade concepts: protections, diagnostics, stable clocks/resets, plus board-level testing strategy.</p>
+        </div>
+
+        <div class="project">
+          <div class="top">
+            <h4 id="pr5t">IoT Edge Device Hardware</h4>
+            <div class="tagrow">
+              <span class="tag">Low Power</span>
+              <span class="tag">Connectivity</span>
+            </div>
+          </div>
+          <p id="pr5p">Connected device hardware with practical considerations for production, serviceability, and field debugging.</p>
+        </div>
+
+        <div class="project">
+          <div class="top">
+            <h4 id="pr6t">Design Review & Debug Support</h4>
+            <div class="tagrow">
+              <span class="tag">DFM/DFA</span>
+              <span class="tag">Root Cause</span>
+            </div>
+          </div>
+          <p id="pr6p">Schematic/PCB review, bring-up plan, and deep debugging to fix issues fast and reduce production risk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="testTitle">Client Feedback Style</h2>
+        <p class="sec-note" id="testNote">Replace these with your real Upwork reviews anytime.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="quote">
+          <p id="q1">
+            Clear communication, professional deliverables, and strong debugging skills. The board worked on first power-up with solid test documentation.
+          </p>
+          <p class="by" id="q1b">— Embedded Product Client</p>
+        </div>
+        <div class="quote">
+          <p id="q2">Excellent PCB layout quality and EMI-conscious routing. Manufacturing package was complete and saved our team days.</p>
+          <p class="by" id="q2b">— Hardware Lead</p>
+        </div>
+        <div class="quote">
+          <p id="q3">Reliable firmware integration and pragmatic engineering decisions. Great focus on safety and production readiness.</p>
+          <p class="by" id="q3b">— Industrial Systems Client</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="cred">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="credTitle">Credentials</h2>
+        <p class="sec-note" id="credNote">Focused on embedded electronics — complementary skills support end-to-end delivery.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="box">
+          <h4 id="eduTitle">Education</h4>
+          <ul class="list" id="eduList">
+            <li>Dipl.-Ing (HTW Dresden) — Part-time (Teilzeit), expected 2030</li>
+            <li>B.Sc. in Software Engineering — Completed</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top:14px;">
+        <h4 id="compTitle">Complementary (Used When Needed)</h4>
+        <p id="compText">
+          Networking, cybersecurity, and cloud connectivity can be applied when your embedded product requires secure communication,
+          logging, monitoring, or IoT integration — without shifting focus away from embedded electronics delivery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / REQUEST FORM -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="contactTitle">Request a Quote / Consultation</h2>
+        <p class="sec-note" id="contactNote">Send details — I’ll respond with questions, timeline, and a structured plan.</p>
+      </div>
+
+      <div class="card contact">
+        <form id="requestForm">
+          <div class="form-grid">
+            <div>
+              <label for="name" id="fNameLabel">Name</label>
+              <input id="name" name="name" placeholder="Your name" required />
+            </div>
+
+            <div>
+              <label for="email" id="fEmailLabel">Email</label>
+              <input id="email" name="email" type="email" placeholder="your@email.com" required />
+            </div>
+
+            <div>
+              <label for="company" id="fCompanyLabel">Company (optional)</label>
+              <input id="company" name="company" placeholder="Company / Team" />
+            </div>
+
+            <div>
+              <label for="country" id="fCountryLabel">Country</label>
+              <input id="country" name="country" placeholder="e.g., Germany" />
+            </div>
+
+            <div>
+              <label for="service" id="fServiceLabel">Service Type</label>
+              <select id="service" name="service" required>
+                <option value="" selected disabled>Select…</option>
+                <option>PCB + Hardware Design</option>
+                <option>Power Electronics / BMS</option>
+                <option>Firmware Development</option>
+                <option>Bring-up / Testing / Debug</option>
+                <option>Design Review (Schematic/PCB/DFM)</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="budget" id="fBudgetLabel">Budget Range</label>
+              <select id="budget" name="budget">
+                <option value="" selected disabled>Select…</option>
+                <option>$500 – $1,000</option>
+                <option>$1,000 – $3,000</option>
+                <option>$3,000 – $7,000</option>
+                <option>$7,000+</option>
+              </select>
+            </div>
+
+            <div class="full">
+              <label for="details" id="fDetailsLabel">Project Details</label>
+              <textarea
+                id="details"
+                name="details"
+                placeholder="Tell me what you need: device purpose, interfaces, constraints, PCB layers, power, deadlines, what you already have…"
+                required
+              ></textarea>
+            </div>
+
+            <div class="full">
+              <label for="timeline" id="fTimelineLabel">Target Timeline</label>
+              <input id="timeline" name="timeline" placeholder="e.g., First prototype in 3 weeks" />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit" id="sendBtn">
+              <span id="sendBtnText">Send Request</span> <span aria-hidden="true">→</span>
+            </button>
+            <button class="btn" type="button" id="copyBtn">
+              <span id="copyBtnText">Copy Message</span>
+            </button>
+            <a class="btn success" id="upworkBtn2" href="https://www.upwork.com/" target="_blank" rel="noopener">
+              <span id="upworkBtn2Text">Hire me on Upwork</span>
+            </a>
+          </div>
+
+          <div class="hint" id="hintText">
+            No backend needed: “Send Request” opens your email client with a pre-filled message and also copies the message to clipboard.
+            For real submissions, enable Formspree in the code (1 minute setup).
+          </div>
+
+          <div class="toast" id="toastOk">Done — message copied and email draft opened.</div>
+          <div class="toast err" id="toastErr">Could not open email app. Message copied — paste it into your email.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <span class="dot"></span>
+          <strong id="footTitle">Embedded & Electronics Engineer</strong>
+        </div>
+        <div id="footSub">Production-ready PCB + Firmware • Bring-up • Testing • Manufacturing support</div>
+      </div>
+
+      <div class="mini">
+        <a href="#services" id="footServices">Services</a>
+        <a href="#projects" id="footProjects">Projects</a>
+        <a href="#contact" id="footRequest">Request</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ========= CONFIG =========
+    const DEST_EMAIL = "YOUR_EMAIL_HERE@example.com";
+    const UPWORK_URL = "https://www.upwork.com/";
+
+    document.getElementById("btnUpwork").href = UPWORK_URL;
+    document.getElementById("upworkBtn2").href = UPWORK_URL;
+
+    // ========= Language content =========
+    // NOTE: Removed: German C1 + IPC CID+ mentions and their badges.
+    const T = {
+      en: {
+        navBrand: "Embedded & Electronics Engineer",
+        navServices: "Services",
+        navProjects: "Projects",
+        navCred: "Credentials",
+        navContact: "Request",
+
+        pill1: "German-speaking",
+        pill2: "Production-ready",
+        pill2b: "PCB + Firmware",
+        pill3: "Focus",
+        pill3b: "Reliability • EMI/EMC • DFM/DFA",
+
+        heroTitle: "Embedded & Electronics Engineering for Production-Ready Systems",
+        heroLead:
+          "I deliver reliable embedded hardware solutions — from concept and schematic design to PCB layout, firmware, bring-up, testing, and manufacturing support. Built for real-world constraints, not just prototypes.",
+
+        btnRequestText: "Request a Quote / Consultation",
+        btnSeeWorkText: "See Work",
+
+        pName: "Abdelrahman — Embedded & Electronics Engineer",
+        pSub: "PCB Design • Power Electronics • Firmware • Bring-up & Production Support",
+        meta3: "Automotive • Industrial • IoT",
+
+        boxFastTitle: "Fast start, clear deliverables",
+        boxFastText:
+          "You get a structured handover package: schematic + PCB + BOM + manufacturing files, firmware repo, bring-up notes, and test results — ready for production.",
+
+        servicesTitle: "Core Services",
+        servicesNote: "Specialized embedded electronics — focused, reliable, production-ready.",
+        svc1t: "PCB & Hardware Design",
+        svc1l: [
+          "2–8 layer PCB layout, EMI/EMC-aware routing",
+          "High-current & power distribution",
+          "Schematic design & component selection",
+          "Manufacturing outputs: BOM, Gerbers, Pick&Place"
+        ],
+        svc2t: "Power Electronics & Battery",
+        svc2l: [
+          "Buck/Boost/LDO design & validation",
+          "Battery monitoring, protection, current sensing",
+          "Thermal and safety-oriented design choices",
+          "Noise/ripple control and robust power-up behavior"
+        ],
+        svc3t: "Firmware + Bring-Up + Testing",
+        svc3l: [
+          "Embedded C/C++ (bare-metal, RTOS basics)",
+          "Drivers: SPI, I2C, UART, CAN",
+          "SWD/JTAG debugging, oscilloscope/logic analyzer",
+          "Bring-up checklist, test plan, production support"
+        ],
+
+        processTitle: "How We Work",
+        processNote: "Simple process. Clear milestones. Predictable delivery.",
+        p1t: "1) Requirements & Architecture",
+        p1p: "We align on requirements, constraints (cost, size, power, compliance), and define interfaces and test criteria.",
+        p2t: "2) Schematic + Design Review",
+        p2p: "Schematic design, component selection, and review for reliability, safety, and manufacturability.",
+        p3t: "3) PCB Layout + Manufacturing Package",
+        p3p: "Layout, DRC/DFM checks, then delivery of Gerbers, BOM, Pick&Place, and assembly notes.",
+        p4t: "4) Firmware + Bring-Up + Testing",
+        p4p: "Firmware drivers, hardware bring-up, debugging, and test report. Support through production issues if needed.",
+
+        projectsTitle: "Selected Project Types",
+        projectsNote: "Representative examples — can be adapted to your product.",
+        pr1t: "Industrial Sensor Interface Board",
+        pr1p: "Low-noise sensing, robust filtering, and industrial comms with validation and test notes for field reliability.",
+        pr2t: "Power & Battery Management Board",
+        pr2p: "Power tree design, current sensing, protections, and EMI-aware layout suitable for production constraints.",
+        pr3t: "Embedded Controller (MCU + I/O)",
+        pr3p: "MCU board + firmware drivers, logs, error handling, and structured bring-up process with test checklist.",
+        pr4t: "Automotive ECU Prototype",
+        pr4p: "Automotive-grade concepts: protections, diagnostics, stable clocks/resets, plus board-level testing strategy.",
+        pr5t: "IoT Edge Device Hardware",
+        pr5p: "Connected device hardware with practical considerations for production, serviceability, and field debugging.",
+        pr6t: "Design Review & Debug Support",
+        pr6p: "Schematic/PCB review, bring-up plan, and deep debugging to fix issues fast and reduce production risk.",
+
+        testTitle: "Client Feedback Style",
+        testNote: "Replace these with your real Upwork reviews anytime.",
+        q1: "Clear communication, professional deliverables, and strong debugging skills. The board worked on first power-up with solid test documentation.",
+        q1b: "— Embedded Product Client",
+        q2: "Excellent PCB layout quality and EMI-conscious routing. Manufacturing package was complete and saved our team days.",
+        q2b: "— Hardware Lead",
+        q3: "Reliable firmware integration and pragmatic engineering decisions. Great focus on safety and production readiness.",
+        q3b: "— Industrial Systems Client",
+
+        credTitle: "Credentials",
+        credNote: "Focused on embedded electronics — complementary skills support end-to-end delivery.",
+        eduTitle: "Education",
+        eduList: [
+          "Dipl.-Ing (HTW Dresden) — Part-time (Teilzeit), expected 2030",
+          "B.Sc. in Software Engineering — Completed"
+        ],
+        compTitle: "Complementary (Used When Needed)",
+        compText:
+          "Networking, cybersecurity, and cloud connectivity can be applied when your embedded product requires secure communication, logging, monitoring, or IoT integration — without shifting focus away from embedded electronics delivery.",
+
+        contactTitle: "Request a Quote / Consultation",
+        contactNote: "Send details — I’ll respond with questions, timeline, and a structured plan.",
+        fNameLabel: "Name",
+        fEmailLabel: "Email",
+        fCompanyLabel: "Company (optional)",
+        fCountryLabel: "Country",
+        fServiceLabel: "Service Type",
+        fBudgetLabel: "Budget Range",
+        fDetailsLabel: "Project Details",
+        fTimelineLabel: "Target Timeline",
+        sendBtnText: "Send Request",
+        copyBtnText: "Copy Message",
+        upworkBtn2Text: "Hire me on Upwork",
+        hintText:
+          "No backend needed: “Send Request” opens your email client with a pre-filled message and also copies the message to clipboard. For real submissions, enable Formspree in the code (1 minute setup).",
+
+        footTitle: "Embedded & Electronics Engineer",
+        footSub: "Production-ready PCB + Firmware • Bring-up • Testing • Manufacturing support",
+        footServices: "Services",
+        footProjects: "Projects",
+        footRequest: "Request"
+      },
+
+      de: {
+        navBrand: "Embedded- & Elektronikingenieur",
+        navServices: "Leistungen",
+        navProjects: "Projekte",
+        navCred: "Qualifikationen",
+        navContact: "Anfrage",
+
+        pill1: "Deutschsprachig",
+        pill2: "Serienreif",
+        pill2b: "PCB + Firmware",
+        pill3: "Fokus",
+        pill3b: "Zuverlässigkeit • EMV • DFM/DFA",
+
+        heroTitle: "Embedded- & Elektronikentwicklung für serienreife Systeme",
+        heroLead:
+          "Ich liefere zuverlässige Embedded-Hardwarelösungen — von Konzept und Schaltplan über PCB-Layout bis Firmware, Inbetriebnahme, Tests und Fertigungsunterstützung. Entwickelt für reale Randbedingungen, nicht nur Prototypen.",
+
+        btnRequestText: "Angebot / Beratung anfragen",
+        btnSeeWorkText: "Arbeiten ansehen",
+
+        pName: "Abdelrahman — Embedded- & Elektronikingenieur",
+        pSub: "PCB-Design • Leistungselektronik • Firmware • Inbetriebnahme & Produktionssupport",
+        meta3: "Automotive • Industrie • IoT",
+
+        boxFastTitle: "Schneller Start, klare Deliverables",
+        boxFastText:
+          "Sie erhalten ein strukturiertes Handover-Paket: Schaltplan + PCB + BOM + Fertigungsdaten, Firmware-Repo, Bring-up-Notizen und Testergebnisse — bereit für die Serie.",
+
+        servicesTitle: "Kernleistungen",
+        servicesNote: "Spezialisierte Embedded-Elektronik — fokussiert, zuverlässig, serienreif.",
+        svc1t: "PCB- & Hardware-Design",
+        svc1l: [
+          "PCB-Layout (2–8 Lagen), EMV-bewusstes Routing",
+          "Hochstrom- & Power-Distribution",
+          "Schaltplanentwicklung & Bauteilauswahl",
+          "Fertigungsdaten: BOM, Gerber, Pick&Place"
+        ],
+        svc2t: "Leistungselektronik & Batterie",
+        svc2l: [
+          "Buck/Boost/LDO-Design & Validierung",
+          "Batterieüberwachung, Schutz, Strommessung",
+          "Thermik- und sicherheitsorientierte Entscheidungen",
+          "Rausch-/Ripple-Optimierung & robustes Power-up"
+        ],
+        svc3t: "Firmware + Inbetriebnahme + Tests",
+        svc3l: [
+          "Embedded C/C++ (Bare-Metal, RTOS-Grundlagen)",
+          "Treiber: SPI, I2C, UART, CAN",
+          "SWD/JTAG-Debugging, Oszilloskop/Logic-Analyzer",
+          "Bring-up-Checkliste, Testplan, Produktionssupport"
+        ],
+
+        processTitle: "Arbeitsweise",
+        processNote: "Einfacher Prozess. Klare Meilensteine. Planbare Lieferung.",
+        p1t: "1) Anforderungen & Architektur",
+        p1p:
+          "Wir klären Anforderungen, Randbedingungen (Kosten, Größe, Leistung, Compliance) und definieren Schnittstellen sowie Testkriterien.",
+        p2t: "2) Schaltplan + Design Review",
+        p2p: "Schaltplan, Bauteilauswahl und Review mit Fokus auf Zuverlässigkeit, Sicherheit und Fertigungstauglichkeit.",
+        p3t: "3) PCB-Layout + Fertigungspaket",
+        p3p: "Layout, DRC/DFM-Checks, anschließend Lieferung von Gerbern, BOM, Pick&Place und Assembly-Notizen.",
+        p4t: "4) Firmware + Bring-up + Tests",
+        p4p: "Firmware-Treiber, Inbetriebnahme, Debugging und Testbericht. Unterstützung bei Produktionsproblemen nach Bedarf.",
+
+        projectsTitle: "Beispielhafte Projekttypen",
+        projectsNote: "Repräsentative Beispiele — an Ihr Produkt anpassbar.",
+        pr1t: "Industrie-Sensor-Interface",
+        pr1p: "Rauscharme Messung, robustes Filtern und Industrie-Kommunikation inkl. Validierung und Testdokumentation.",
+        pr2t: "Power- & Batteriemanagement",
+        pr2p: "Power-Tree-Design, Strommessung, Schutzbeschaltungen und EMV-bewusstes Layout für Serienanforderungen.",
+        pr3t: "Embedded Controller (MCU + I/O)",
+        pr3p: "MCU-Board + Firmware-Treiber, Logs, Fehlerbehandlung und strukturierter Bring-up mit Testcheckliste.",
+        pr4t: "Automotive ECU Prototyp",
+        pr4p: "Automotive-orientiert: Schutz, Diagnose, stabile Clocks/Resets sowie Board-Level-Teststrategie.",
+        pr5t: "IoT Edge Device Hardware",
+        pr5p: "Connected-Device-Hardware mit Fokus auf Fertigung, Wartbarkeit und Field-Debugging.",
+        pr6t: "Design Review & Debug Support",
+        pr6p: "Schaltplan/PCB-Review, Bring-up-Plan und tiefes Debugging zur schnellen Fehlerbehebung und Risikoreduzierung.",
+
+        testTitle: "Feedback-Stil",
+        testNote: "Ersetzen Sie diese Texte jederzeit durch echte Upwork-Bewertungen.",
+        q1: "Klare Kommunikation, professionelle Deliverables und starkes Debugging. Das Board lief beim ersten Power-up mit sauberer Testdoku.",
+        q1b: "— Embedded Produktkunde",
+        q2: "Sehr hohe PCB-Layout-Qualität und EMV-bewusstes Routing. Fertigungspaket war vollständig und sparte uns Tage.",
+        q2b: "— Hardware Lead",
+        q3: "Zuverlässige Firmware-Integration und pragmatische Engineering-Entscheidungen. Starker Fokus auf Sicherheit und Serienreife.",
+        q3b: "— Industriekunde",
+
+        credTitle: "Qualifikationen",
+        credNote: "Fokus auf Embedded-Elektronik — ergänzende Skills unterstützen End-to-End-Lieferung.",
+        eduTitle: "Ausbildung",
+        eduList: [
+          "Dipl.-Ing (HTW Dresden) — Teilzeit, voraussichtlicher Abschluss 2030",
+          "B.Sc. Software Engineering — abgeschlossen"
+        ],
+        compTitle: "Ergänzend (bei Bedarf)",
+        compText:
+          "Networking, Cybersecurity und Cloud-Konnektivität nutze ich, wenn Ihr Embedded-Produkt sichere Kommunikation, Logging/Monitoring oder IoT-Integration benötigt — ohne den Fokus von Embedded-Elektronik zu verschieben.",
+
+        contactTitle: "Angebot / Beratung anfragen",
+        contactNote: "Senden Sie Details — ich antworte mit Rückfragen, Zeitplan und einem strukturierten Vorgehen.",
+        fNameLabel: "Name",
+        fEmailLabel: "E-Mail",
+        fCompanyLabel: "Firma (optional)",
+        fCountryLabel: "Land",
+        fServiceLabel: "Leistung",
+        fBudgetLabel: "Budget",
+        fDetailsLabel: "Projektbeschreibung",
+        fTimelineLabel: "Ziel-Zeitplan",
+        sendBtnText: "Anfrage senden",
+        copyBtnText: "Nachricht kopieren",
+        upworkBtn2Text: "Auf Upwork beauftragen",
+        hintText:
+          "Kein Backend nötig: „Anfrage senden“ öffnet Ihr E-Mail-Programm mit einer vorbefüllten Nachricht und kopiert den Text zusätzlich in die Zwischenablage. Für echtes Absenden: Formspree aktivieren (1 Minute).",
+
+        footTitle: "Embedded- & Elektronikingenieur",
+        footSub: "Serienreife PCB + Firmware • Bring-up • Tests • Fertigungsunterstützung",
+        footServices: "Leistungen",
+        footProjects: "Projekte",
+        footRequest: "Anfrage"
+      }
+    };
+
+    function setLang(lang){
+      document.getElementById("btnEN").classList.toggle("active", lang==="en");
+      document.getElementById("btnDE").classList.toggle("active", lang==="de");
+
+      const t = T[lang];
+
+      // Topbar
+      document.getElementById("navBrand").textContent = t.navBrand;
+      document.getElementById("navServices").textContent = t.navServices;
+      document.getElementById("navProjects").textContent = t.navProjects;
+      document.getElementById("navCred").textContent = t.navCred;
+      document.getElementById("navContact").textContent = t.navContact;
+
+      // Pills
+      document.getElementById("pill1").textContent = t.pill1;
+      document.getElementById("pill2").textContent = t.pill2;
+      document.getElementById("pill2b").textContent = t.pill2b;
+      document.getElementById("pill3").textContent = t.pill3;
+      document.getElementById("pill3b").textContent = t.pill3b;
+
+      // Hero
+      document.getElementById("heroTitle").textContent = t.heroTitle;
+      document.getElementById("heroLead").textContent = t.heroLead;
+      document.getElementById("btnRequestText").textContent = t.btnRequestText;
+      document.getElementById("btnSeeWorkText").textContent = t.btnSeeWorkText;
+
+      // Profile
+      document.getElementById("pName").textContent = t.pName;
+      document.getElementById("pSub").textContent = t.pSub;
+      document.getElementById("meta3").textContent = t.meta3;
+
+      // Box
+      document.getElementById("boxFastTitle").textContent = t.boxFastTitle;
+      document.getElementById("boxFastText").textContent = t.boxFastText;
+
+      // Services
+      document.getElementById("servicesTitle").textContent = t.servicesTitle;
+      document.getElementById("servicesNote").textContent = t.servicesNote;
+      document.getElementById("svc1t").textContent = t.svc1t;
+      document.getElementById("svc2t").textContent = t.svc2t;
+      document.getElementById("svc3t").textContent = t.svc3t;
+
+      document.getElementById("svc1l").innerHTML = t.svc1l.map(x=>`<li>${x}</li>`).join("");
+      document.getElementById("svc2l").innerHTML = t.svc2l.map(x=>`<li>${x}</li>`).join("");
+      document.getElementById("svc3l").innerHTML = t.svc3l.map(x=>`<li>${x}</li>`).join("");
+
+      // Process
+      document.getElementById("processTitle").textContent = t.processTitle;
+      document.getElementById("processNote").textContent = t.processNote;
+      document.getElementById("p1t").textContent = t.p1t;
+      document.getElementById("p1p").textContent = t.p1p;
+      document.getElementById("p2t").textContent = t.p2t;
+      document.getElementById("p2p").textContent = t.p2p;
+      document.getElementById("p3t").textContent = t.p3t;
+      document.getElementById("p3p").textContent = t.p3p;
+      document.getElementById("p4t").textContent = t.p4t;
+      document.getElementById("p4p").textContent = t.p4p;
+
+      // Projects
+      document.getElementById("projectsTitle").textContent = t.projectsTitle;
+      document.getElementById("projectsNote").textContent = t.projectsNote;
+      document.getElementById("pr1t").textContent = t.pr1t;
+      document.getElementById("pr1p").textContent = t.pr1p;
+      document.getElementById("pr2t").textContent = t.pr2t;
+      document.getElementById("pr2p").textContent = t.pr2p;
+      document.getElementById("pr3t").textContent = t.pr3t;
+      document.getElementById("pr3p").textContent = t.pr3p;
+      document.getElementById("pr4t").textContent = t.pr4t;
+      document.getElementById("pr4p").textContent = t.pr4p;
+      document.getElementById("pr5t").textContent = t.pr5t;
+      document.getElementById("pr5p").textContent = t.pr5p;
+      document.getElementById("pr6t").textContent = t.pr6t;
+      document.getElementById("pr6p").textContent = t.pr6p;
+
+      // Testimonials
+      document.getElementById("testTitle").textContent = t.testTitle;
+      document.getElementById("testNote").textContent = t.testNote;
+      document.getElementById("q1").textContent = t.q1;
+      document.getElementById("q1b").textContent = t.q1b;
+      document.getElementById("q2").textContent = t.q2;
+      document.getElementById("q2b").textContent = t.q2b;
+      document.getElementById("q3").textContent = t.q3;
+      document.getElementById("q3b").textContent = t.q3b;
+
+      // Credentials
+      document.getElementById("credTitle").textContent = t.credTitle;
+      document.getElementById("credNote").textContent = t.credNote;
+      document.getElementById("eduTitle").textContent = t.eduTitle;
+      document.getElementById("eduList").innerHTML = t.eduList.map(x=>`<li>${x}</li>`).join("");
+      document.getElementById("compTitle").textContent = t.compTitle;
+      document.getElementById("compText").textContent = t.compText;
+
+      // Contact
+      document.getElementById("contactTitle").textContent = t.contactTitle;
+      document.getElementById("contactNote").textContent = t.contactNote;
+      document.getElementById("fNameLabel").textContent = t.fNameLabel;
+      document.getElementById("fEmailLabel").textContent = t.fEmailLabel;
+      document.getElementById("fCompanyLabel").textContent = t.fCompanyLabel;
+      document.getElementById("fCountryLabel").textContent = t.fCountryLabel;
+      document.getElementById("fServiceLabel").textContent = t.fServiceLabel;
+      document.getElementById("fBudgetLabel").textContent = t.fBudgetLabel;
+      document.getElementById("fDetailsLabel").textContent = t.fDetailsLabel;
+      document.getElementById("fTimelineLabel").textContent = t.fTimelineLabel;
+      document.getElementById("sendBtnText").textContent = t.sendBtnText;
+      document.getElementById("copyBtnText").textContent = t.copyBtnText;
+      document.getElementById("upworkBtn2Text").textContent = t.upworkBtn2Text;
+      document.getElementById("hintText").textContent = t.hintText;
+
+      // Footer
+      document.getElementById("footTitle").textContent = t.footTitle;
+      document.getElementById("footSub").textContent = t.footSub;
+      document.getElementById("footServices").textContent = t.footServices;
+      document.getElementById("footProjects").textContent = t.footProjects;
+      document.getElementById("footRequest").textContent = t.footRequest;
+    }
+
+    // ========= Contact form behavior =========
+    function buildMessage(data){
+      const lines = [
+        "New Project Request",
+        "-------------------",
+        `Name: ${data.name || ""}`,
+        `Email: ${data.email || ""}`,
+        `Company: ${data.company || ""}`,
+        `Country: ${data.country || ""}`,
+        `Service: ${data.service || ""}`,
+        `Budget: ${data.budget || ""}`,
+        `Timeline: ${data.timeline || ""}`,
+        "",
+        "Details:",
+        data.details || ""
+      ];
+      return lines.join("\n");
+    }
+
+    async function copyToClipboard(text){
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    }
+
+    function showToast(ok=true){
+      const toastOk = document.getElementById("toastOk");
+      const toastErr = document.getElementById("toastErr");
+      toastOk.style.display = ok ? "block" : "none";
+      toastErr.style.display = ok ? "none" : "block";
+      setTimeout(()=>{
+        toastOk.style.display = "none";
+        toastErr.style.display = "none";
+      }, 5000);
+    }
+
+    document.getElementById("copyBtn").addEventListener("click", async ()=>{
+      const form = document.getElementById("requestForm");
+      const data = Object.fromEntries(new FormData(form).entries());
+      const msg = buildMessage(data);
+      const ok = await copyToClipboard(msg);
+      showToast(ok);
+    });
+
+    document.getElementById("requestForm").addEventListener("submit", async (e)=>{
+      e.preventDefault();
+
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      const msg = buildMessage(data);
+
+      try { await copyToClipboard(msg); } catch (e) {}
+
+      const subject = encodeURIComponent("Project Request: Embedded / PCB / Firmware");
+      const body = encodeURIComponent(msg);
+
+      if (!DEST_EMAIL || DEST_EMAIL.includes("YOUR_EMAIL_HERE")) {
+        showToast(false);
+        return;
+      }
+
+      const mailto = `mailto:${encodeURIComponent(DEST_EMAIL)}?subject=${subject}&body=${body}`;
+      const w = window.open(mailto, "_blank");
+      if (!w) showToast(false);
+      else showToast(true);
+    });
+
+    // Default language
+    setLang("en");
+  </script>
 </body>
 </html>
