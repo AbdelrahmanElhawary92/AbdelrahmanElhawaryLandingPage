@@ -40,7 +40,7 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Abdelrahman Elhawary — Electronics & Embedded Expert" />
 
-  <!-- Twitter (helps previews too) -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Embedded & Electronics Engineer | Production-Ready PCB + Firmware" />
   <meta
@@ -287,7 +287,12 @@
     .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .grid3{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 
-    .box{ padding: 16px; border-radius: var(--radius); border: 1px solid rgba(35,49,77,.75); background: rgba(15,26,46,.55); }
+    .box{
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(35,49,77,.75);
+      background: rgba(15,26,46,.55);
+    }
     .box h4{ margin: 0 0 8px; font-size: 15px; letter-spacing: -0.1px; }
     .box p{ margin: 0; color: var(--muted); font-size: 13.5px; }
 
@@ -421,7 +426,6 @@
     }
     .mini a:hover{ border-color: rgba(59,130,246,.45); color: var(--text); }
 
-    /* Responsive */
     @media (max-width: 980px){
       .hero-grid{ grid-template-columns: 1fr; }
       .grid3{ grid-template-columns: 1fr; }
@@ -443,6 +447,7 @@
 
       <nav class="nav" aria-label="Primary">
         <a href="#services" id="navServices">Services</a>
+        <a href="#training" id="navTraining">Training</a>
         <a href="#projects" id="navProjects">Projects</a>
         <a href="#cred" id="navCred">Credentials</a>
         <a href="#contact" id="navContact">Request</a>
@@ -463,7 +468,6 @@
       <div class="hero-grid">
         <div>
           <div class="pillrow">
-            <!-- Removed German C1 pill content (kept layout) -->
             <div class="pill"><strong id="pill1">German-speaking</strong></div>
             <div class="pill"><strong id="pill2">Production-ready</strong> <span id="pill2b">PCB + Firmware</span></div>
             <div class="pill"><strong id="pill3">Focus</strong> <span id="pill3b">Reliability • EMI/EMC • DFM/DFA</span></div>
@@ -476,7 +480,6 @@
           </p>
 
           <div class="cta">
-           
             <a class="btn success" href="#contact" id="btnRequest">
               <span id="btnRequestText">Request a Quote / Consultation</span> <span aria-hidden="true">✦</span>
             </a>
@@ -502,7 +505,6 @@
               <p class="pname" id="pName">Abdelrahman — Embedded & Electronics Engineer</p>
               <p class="psub" id="pSub">PCB Design • Power Electronics • Firmware • Bring-up & Production Support</p>
               <div class="pmeta">
-                <!-- Removed badges: German C1 + IPC CID+ -->
                 <span class="badge" id="meta3">Automotive • Industrial • IoT</span>
               </div>
             </div>
@@ -557,6 +559,68 @@
             <li>SWD/JTAG debugging, oscilloscope/logic analyzer</li>
             <li>Bring-up checklist, test plan, production support</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section id="training">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="trainingTitle">Training, Courses & Workshops</h2>
+        <p class="sec-note" id="trainingNote">
+          Practical training in embedded systems and electronics for beginners, advanced learners, teams, and professionals.
+        </p>
+      </div>
+
+      <div class="grid3">
+        <div class="box">
+          <h4 id="tr1t">Beginner Training Track</h4>
+          <ul class="list" id="tr1l">
+            <li>Introduction to embedded systems and electronics</li>
+            <li>Basic electronics: voltage, current, resistors, capacitors, diodes, transistors</li>
+            <li>Microcontroller fundamentals and simple embedded C programming</li>
+            <li>GPIO, UART, basic sensors, and first hardware projects</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h4 id="tr2t">Advanced Training Track</h4>
+          <ul class="list" id="tr2l">
+            <li>Advanced embedded C/C++, architecture, optimization, and debugging</li>
+            <li>RTOS concepts, task design, memory handling, and real-time behavior</li>
+            <li>Drivers and interfaces: SPI, I2C, UART, CAN, interrupts, timers, DMA</li>
+            <li>PCB design best practices, EMI/EMC, power integrity, bring-up, and test workflows</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h4 id="tr3t">Custom Courses & Workshops</h4>
+          <ul class="list" id="tr3l">
+            <li>Tailored workshops for companies, engineering teams, and universities</li>
+            <li>Project-based training with practical examples and real debugging sessions</li>
+            <li>Hands-on learning using oscilloscope, logic analyzer, and real boards</li>
+            <li>Available online or onsite depending on scope and location</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid2" style="margin-top:14px;">
+        <div class="box">
+          <h4 id="trainingBoxTitle">Who this training is for</h4>
+          <p id="trainingBoxText">
+            Ideal for beginners who want a strong foundation, advanced engineers who want deeper embedded and electronics expertise,
+            and companies that need practical, results-oriented technical training.
+          </p>
+        </div>
+
+        <div class="box">
+          <h4 id="trainingFormatTitle">Training Formats</h4>
+          <p id="trainingFormatText">
+            One-to-one mentoring, group courses, company workshops, project-based sessions, and customized learning paths for
+            embedded systems, firmware, electronics, PCB design, and debugging.
+          </p>
         </div>
       </div>
     </div>
@@ -727,7 +791,7 @@
     </div>
   </section>
 
-  <!-- CONTACT / REQUEST FORM -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="wrap">
       <div class="sec-head">
@@ -767,6 +831,7 @@
                 <option>Firmware Development</option>
                 <option>Bring-up / Testing / Debug</option>
                 <option>Design Review (Schematic/PCB/DFM)</option>
+                <option>Training / Courses / Workshops</option>
                 <option>Other</option>
               </select>
             </div>
@@ -787,14 +852,14 @@
               <textarea
                 id="details"
                 name="details"
-                placeholder="Tell me what you need: device purpose, interfaces, constraints, PCB layers, power, deadlines, what you already have…"
+                placeholder="Tell me what you need: project purpose, interfaces, constraints, PCB layers, power, deadlines, or training needs (beginner/advanced, individuals/team, online/onsite)…"
                 required
               ></textarea>
             </div>
 
             <div class="full">
               <label for="timeline" id="fTimelineLabel">Target Timeline</label>
-              <input id="timeline" name="timeline" placeholder="e.g., First prototype in 3 weeks" />
+              <input id="timeline" name="timeline" placeholder="e.g., First prototype in 3 weeks / 4-week advanced workshop" />
             </div>
           </div>
 
@@ -805,10 +870,7 @@
             <button class="btn" type="button" id="copyBtn">
               <span id="copyBtnText">Copy Message</span>
             </button>
-         
           </div>
-
-          
 
           <div class="toast" id="toastOk">Done — message copied and email draft opened.</div>
           <div class="toast err" id="toastErr">Could not open email app. Message copied — paste it into your email.</div>
@@ -830,19 +892,20 @@
 
       <div class="mini">
         <a href="#services" id="footServices">Services</a>
+        <a href="#training" id="footTraining">Training</a>
         <a href="#projects" id="footProjects">Projects</a>
         <a href="#contact" id="footRequest">Request</a>
       </div>
-      <!-- Social links (ضع الروابط مكان #) -->
-<div class="mini" id="socialLinks">
-  <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="#" target="_blank" rel="noopener">GitHub</a>
-  <a href="#" target="_blank" rel="noopener">Facebook</a>
-  <a href="#" target="_blank" rel="noopener">YouTube</a>
-  <a href="#" target="_blank" rel="noopener">Instagram</a>
-  <a href="#" target="_blank" rel="noopener">X (Twitter)</a>
-  <a href="#" target="_blank" rel="noopener">TikTok</a>
-</div>
+
+      <div class="mini" id="socialLinks">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">Facebook</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+      </div>
     </div>
   </footer>
 
@@ -851,11 +914,11 @@
     const DEST_EMAIL = "YOUR_EMAIL_HERE@example.com";
 
     // ========= Language content =========
-    // NOTE: Removed: German C1 + IPC CID+ mentions and their badges.
     const T = {
       en: {
         navBrand: "Embedded & Electronics Engineer",
         navServices: "Services",
+        navTraining: "Training",
         navProjects: "Projects",
         navCred: "Credentials",
         navContact: "Request",
@@ -904,6 +967,34 @@
           "SWD/JTAG debugging, oscilloscope/logic analyzer",
           "Bring-up checklist, test plan, production support"
         ],
+
+        trainingTitle: "Training, Courses & Workshops",
+        trainingNote: "Practical training in embedded systems and electronics for beginners, advanced learners, teams, and professionals.",
+        tr1t: "Beginner Training Track",
+        tr1l: [
+          "Introduction to embedded systems and electronics",
+          "Basic electronics: voltage, current, resistors, capacitors, diodes, transistors",
+          "Microcontroller fundamentals and simple embedded C programming",
+          "GPIO, UART, basic sensors, and first hardware projects"
+        ],
+        tr2t: "Advanced Training Track",
+        tr2l: [
+          "Advanced embedded C/C++, architecture, optimization, and debugging",
+          "RTOS concepts, task design, memory handling, and real-time behavior",
+          "Drivers and interfaces: SPI, I2C, UART, CAN, interrupts, timers, DMA",
+          "PCB design best practices, EMI/EMC, power integrity, bring-up, and test workflows"
+        ],
+        tr3t: "Custom Courses & Workshops",
+        tr3l: [
+          "Tailored workshops for companies, engineering teams, and universities",
+          "Project-based training with practical examples and real debugging sessions",
+          "Hands-on learning using oscilloscope, logic analyzer, and real boards",
+          "Available online or onsite depending on scope and location"
+        ],
+        trainingBoxTitle: "Who this training is for",
+        trainingBoxText: "Ideal for beginners who want a strong foundation, advanced engineers who want deeper embedded and electronics expertise, and companies that need practical, results-oriented technical training.",
+        trainingFormatTitle: "Training Formats",
+        trainingFormatText: "One-to-one mentoring, group courses, company workshops, project-based sessions, and customized learning paths for embedded systems, firmware, electronics, PCB design, and debugging.",
 
         processTitle: "How We Work",
         processNote: "Simple process. Clear milestones. Predictable delivery.",
@@ -966,6 +1057,7 @@
         footTitle: "Embedded & Electronics Engineer",
         footSub: "Production-ready PCB + Firmware • Bring-up • Testing • Manufacturing support",
         footServices: "Services",
+        footTraining: "Training",
         footProjects: "Projects",
         footRequest: "Request"
       },
@@ -973,6 +1065,7 @@
       de: {
         navBrand: "Embedded- & Elektronikingenieur",
         navServices: "Leistungen",
+        navTraining: "Training",
         navProjects: "Projekte",
         navCred: "Qualifikationen",
         navContact: "Anfrage",
@@ -1021,6 +1114,34 @@
           "SWD/JTAG-Debugging, Oszilloskop/Logic-Analyzer",
           "Bring-up-Checkliste, Testplan, Produktionssupport"
         ],
+
+        trainingTitle: "Trainings, Kurse & Workshops",
+        trainingNote: "Praxisnahe Schulungen in Embedded Systems und Elektronik für Anfänger, Fortgeschrittene, Teams und Fachkräfte.",
+        tr1t: "Einsteiger-Training",
+        tr1l: [
+          "Einführung in Embedded Systems und Elektronik",
+          "Grundlagen der Elektronik: Spannung, Strom, Widerstände, Kondensatoren, Dioden, Transistoren",
+          "Mikrocontroller-Grundlagen und einfaches Embedded-C-Programming",
+          "GPIO, UART, einfache Sensoren und erste Hardware-Projekte"
+        ],
+        tr2t: "Fortgeschrittenen-Training",
+        tr2l: [
+          "Fortgeschrittenes Embedded C/C++, Architektur, Optimierung und Debugging",
+          "RTOS-Konzepte, Task-Design, Speicherverwaltung und Echtzeitverhalten",
+          "Treiber und Schnittstellen: SPI, I2C, UART, CAN, Interrupts, Timer, DMA",
+          "PCB-Best-Practices, EMV, Power Integrity, Bring-up und Test-Workflows"
+        ],
+        tr3t: "Individuelle Kurse & Workshops",
+        tr3l: [
+          "Maßgeschneiderte Workshops für Unternehmen, Engineering-Teams und Hochschulen",
+          "Projektbasiertes Lernen mit Praxisbeispielen und echten Debugging-Sessions",
+          "Hands-on-Training mit Oszilloskop, Logic Analyzer und realen Boards",
+          "Online oder vor Ort je nach Umfang und Standort verfügbar"
+        ],
+        trainingBoxTitle: "Für wen ist dieses Training geeignet?",
+        trainingBoxText: "Ideal für Anfänger mit Bedarf an einer starken Grundlage, für erfahrene Ingenieure mit Wunsch nach tieferem Embedded- und Elektronik-Know-how sowie für Unternehmen, die praxisnahe technische Schulungen benötigen.",
+        trainingFormatTitle: "Trainingsformate",
+        trainingFormatText: "Einzel-Mentoring, Gruppenkurse, Firmenworkshops, projektbasierte Sessions und individuelle Lernpfade für Embedded Systems, Firmware, Elektronik, PCB-Design und Debugging.",
 
         processTitle: "Arbeitsweise",
         processNote: "Einfacher Prozess. Klare Meilensteine. Planbare Lieferung.",
@@ -1084,6 +1205,7 @@
         footTitle: "Embedded- & Elektronikingenieur",
         footSub: "Serienreife PCB + Firmware • Bring-up • Tests • Fertigungsunterstützung",
         footServices: "Leistungen",
+        footTraining: "Training",
         footProjects: "Projekte",
         footRequest: "Anfrage"
       }
@@ -1098,6 +1220,7 @@
       // Topbar
       document.getElementById("navBrand").textContent = t.navBrand;
       document.getElementById("navServices").textContent = t.navServices;
+      document.getElementById("navTraining").textContent = t.navTraining;
       document.getElementById("navProjects").textContent = t.navProjects;
       document.getElementById("navCred").textContent = t.navCred;
       document.getElementById("navContact").textContent = t.navContact;
@@ -1130,10 +1253,23 @@
       document.getElementById("svc1t").textContent = t.svc1t;
       document.getElementById("svc2t").textContent = t.svc2t;
       document.getElementById("svc3t").textContent = t.svc3t;
-
       document.getElementById("svc1l").innerHTML = t.svc1l.map(x=>`<li>${x}</li>`).join("");
       document.getElementById("svc2l").innerHTML = t.svc2l.map(x=>`<li>${x}</li>`).join("");
       document.getElementById("svc3l").innerHTML = t.svc3l.map(x=>`<li>${x}</li>`).join("");
+
+      // Training
+      document.getElementById("trainingTitle").textContent = t.trainingTitle;
+      document.getElementById("trainingNote").textContent = t.trainingNote;
+      document.getElementById("tr1t").textContent = t.tr1t;
+      document.getElementById("tr2t").textContent = t.tr2t;
+      document.getElementById("tr3t").textContent = t.tr3t;
+      document.getElementById("tr1l").innerHTML = t.tr1l.map(x=>`<li>${x}</li>`).join("");
+      document.getElementById("tr2l").innerHTML = t.tr2l.map(x=>`<li>${x}</li>`).join("");
+      document.getElementById("tr3l").innerHTML = t.tr3l.map(x=>`<li>${x}</li>`).join("");
+      document.getElementById("trainingBoxTitle").textContent = t.trainingBoxTitle;
+      document.getElementById("trainingBoxText").textContent = t.trainingBoxText;
+      document.getElementById("trainingFormatTitle").textContent = t.trainingFormatTitle;
+      document.getElementById("trainingFormatText").textContent = t.trainingFormatText;
 
       // Process
       document.getElementById("processTitle").textContent = t.processTitle;
@@ -1165,7 +1301,6 @@
 
       // Testimonials
       document.getElementById("testTitle").textContent = t.testTitle;
-      document.getElementById("testNote").textContent = t.testNote;
       document.getElementById("q1").textContent = t.q1;
       document.getElementById("q1b").textContent = t.q1b;
       document.getElementById("q2").textContent = t.q2;
@@ -1194,12 +1329,12 @@
       document.getElementById("fTimelineLabel").textContent = t.fTimelineLabel;
       document.getElementById("sendBtnText").textContent = t.sendBtnText;
       document.getElementById("copyBtnText").textContent = t.copyBtnText;
-      document.getElementById("hintText").textContent = t.hintText;
 
       // Footer
       document.getElementById("footTitle").textContent = t.footTitle;
       document.getElementById("footSub").textContent = t.footSub;
       document.getElementById("footServices").textContent = t.footServices;
+      document.getElementById("footTraining").textContent = t.footTraining;
       document.getElementById("footProjects").textContent = t.footProjects;
       document.getElementById("footRequest").textContent = t.footRequest;
     }
@@ -1207,8 +1342,8 @@
     // ========= Contact form behavior =========
     function buildMessage(data){
       const lines = [
-        "New Project Request",
-        "-------------------",
+        "New Project / Training Request",
+        "-----------------------------",
         `Name: ${data.name || ""}`,
         `Email: ${data.email || ""}`,
         `Company: ${data.company || ""}`,
@@ -1267,7 +1402,7 @@
 
       try { await copyToClipboard(msg); } catch (e) {}
 
-      const subject = encodeURIComponent("Project Request: Embedded / PCB / Firmware");
+      const subject = encodeURIComponent("Project Request: Embedded / PCB / Firmware / Training");
       const body = encodeURIComponent(msg);
 
       if (!DEST_EMAIL || DEST_EMAIL.includes("YOUR_EMAIL_HERE")) {
