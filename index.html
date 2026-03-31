@@ -11,13 +11,8 @@
     content="German-speaking Embedded & Electronics Engineer. PCB design (2–8 layers), power electronics, firmware (C/C++/RTOS), bring-up/testing, DFM/DFA and production support."
   />
 
-  <!-- Canonical -->
-  <link
-    rel="canonical"
-    href="https://abdelrahmanelhawary92.github.io/AbdelrahmanElhawaryLandingPage/"
-  />
+  <link rel="canonical" href="https://abdelrahmanelhawary92.github.io/AbdelrahmanElhawaryLandingPage/" />
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Embedded & Electronics Engineer | Production-Ready PCB + Firmware" />
   <meta
@@ -25,22 +20,13 @@
     content="German-speaking Embedded & Electronics Engineer. PCB design (2–8 layers), power electronics, firmware (C/C++/RTOS), bring-up/testing, DFM/DFA and production support."
   />
   <meta property="og:url" content="https://abdelrahmanelhawary92.github.io/AbdelrahmanElhawaryLandingPage/" />
-
-  <!-- IMPORTANT IMAGE (Facebook/LinkedIn/WhatsApp) -->
-  <meta
-    property="og:image"
-    content="https://abdelrahmanelhawary92.github.io/AbdelrahmanElhawaryLandingPage/es.png?v=9"
-  />
-  <meta
-    property="og:image:secure_url"
-    content="https://abdelrahmanelhawary92.github.io/AbdelrahmanElhawaryLandingPage/es.png?v=9"
-  />
+  <meta property="og:image" content="https://abdelrahmanelhawary92.github.io/AbdelrahmanElhawaryLandingPage/es.png?v=9" />
+  <meta property="og:image:secure_url" content="https://abdelrahmanelhawary92.github.io/AbdelrahmanElhawaryLandingPage/es.png?v=9" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Abdelrahman Elhawary — Electronics & Embedded Expert" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Embedded & Electronics Engineer | Production-Ready PCB + Firmware" />
   <meta
@@ -88,7 +74,6 @@
     a{ color:inherit; text-decoration:none; }
     .wrap{ max-width: var(--max); margin:0 auto; padding: 0 20px; }
 
-    /* Top bar */
     .topbar{
       position: sticky;
       top:0;
@@ -156,7 +141,6 @@
       background: rgba(59,130,246,.12);
     }
 
-    /* Hero */
     .hero{
       padding: 46px 0 18px;
     }
@@ -215,12 +199,6 @@
     }
     .btn:hover{ background: rgba(15,26,46,.85); border-color: rgba(59,130,246,.45); }
     .btn:active{ transform: translateY(1px); }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(59,130,246,.72));
-      border-color: rgba(59,130,246,.55);
-      box-shadow: 0 14px 35px rgba(59,130,246,.18);
-    }
-    .btn.primary:hover{ filter: brightness(1.03); }
     .btn.success{
       background: linear-gradient(135deg, rgba(34,197,94,.92), rgba(34,197,94,.68));
       border-color: rgba(34,197,94,.55);
@@ -266,7 +244,6 @@
       background: rgba(15,26,46,.55);
     }
 
-    /* Sections */
     section{ padding: 34px 0; }
     .sec-head{
       display:flex; justify-content:space-between; align-items:flex-end;
@@ -350,7 +327,37 @@
       font-family: Georgia, serif;
     }
 
-    /* Contact */
+    .video-card{
+      overflow: hidden;
+      padding: 0;
+    }
+    .video-shell{
+      position: relative;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      background: #000;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .video-shell video,
+    .video-shell iframe{
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+      object-fit: cover;
+      background: #000;
+    }
+    .video-copy{
+      padding: 18px;
+    }
+    .video-points{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
     .contact{ padding: 18px; }
     .form-grid{
       display:grid;
@@ -397,13 +404,7 @@
       color: #c9f7dc;
       font-size: 13px;
     }
-    .toast.err{
-      border-color: rgba(239,68,68,.55);
-      background: rgba(239,68,68,.10);
-      color: #ffd1d1;
-    }
 
-    /* Footer */
     footer{
       padding: 26px 0 40px;
       border-top: 1px solid rgba(35,49,77,.55);
@@ -432,12 +433,12 @@
       .grid2{ grid-template-columns: 1fr; }
       .form-grid{ grid-template-columns: 1fr; }
       .nav{ display:none; }
+      .h1{ font-size: 34px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- TOPBAR -->
   <div class="topbar">
     <div class="wrap topbar-inner">
       <div class="brand">
@@ -447,6 +448,7 @@
 
       <nav class="nav" aria-label="Primary">
         <a href="#services" id="navServices">Services</a>
+        <a href="#video" id="navVideo">Video</a>
         <a href="#training" id="navTraining">Training</a>
         <a href="#projects" id="navProjects">Projects</a>
         <a href="#cred" id="navCred">Credentials</a>
@@ -462,7 +464,6 @@
     </div>
   </div>
 
-  <!-- HERO -->
   <header class="hero">
     <div class="wrap">
       <div class="hero-grid">
@@ -522,7 +523,67 @@
     </div>
   </header>
 
-  <!-- SERVICES -->
+  <!-- VIDEO SECTION -->
+  <section id="video">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title" id="videoTitle">Short Introduction Video</h2>
+        <p class="sec-note" id="videoNote">A quick way to build trust and show how you communicate technically.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card video-card">
+          <div class="video-shell">
+            <!--
+              OPTION 1: local video
+              - Put your file in the same folder as this HTML
+              - Name it: intro-video.mp4
+              - Optional poster image: intro-poster.jpg
+            -->
+            <video controls preload="metadata" poster="intro-poster.jpg">
+              <source src="intro-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <!--
+              OPTION 2: YouTube embed
+              - If you prefer YouTube, delete the <video> block above
+              - Then use this instead:
+
+              <iframe
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="Abdelrahman Introduction Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            -->
+          </div>
+        </div>
+
+        <div class="box video-copy">
+          <h4 id="videoBoxTitle">What this video should cover</h4>
+          <p id="videoBoxText">
+            Keep it short and direct: who you are, what you build, the kind of clients you help, and why your work is production-ready.
+          </p>
+
+          <div class="video-points">
+            <span class="badge" id="videoPoint1">30–60 sec</span>
+            <span class="badge" id="videoPoint2">German or English</span>
+            <span class="badge" id="videoPoint3">Clear audio</span>
+            <span class="badge" id="videoPoint4">Professional background</span>
+          </div>
+
+          <ul class="list" id="videoList" style="margin-top:14px;">
+            <li>Say your name and specialty in the first 5 seconds.</li>
+            <li>Mention PCB design, firmware, bring-up, and production support.</li>
+            <li>Speak naturally and confidently — no need for long details.</li>
+            <li>End with a simple call to action: contact me for your project.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="services">
     <div class="wrap">
       <div class="sec-head">
@@ -564,7 +625,6 @@
     </div>
   </section>
 
-  <!-- TRAINING -->
   <section id="training">
     <div class="wrap">
       <div class="sec-head">
@@ -626,7 +686,6 @@
     </div>
   </section>
 
-  <!-- PROCESS -->
   <section id="process">
     <div class="wrap">
       <div class="sec-head">
@@ -659,7 +718,6 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects">
     <div class="wrap">
       <div class="sec-head">
@@ -737,7 +795,6 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
   <section id="testimonials">
     <div class="wrap">
       <div class="sec-head">
@@ -763,7 +820,6 @@
     </div>
   </section>
 
-  <!-- CREDENTIALS -->
   <section id="cred">
     <div class="wrap">
       <div class="sec-head">
@@ -791,7 +847,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="wrap">
       <div class="sec-head">
@@ -824,100 +879,76 @@
 
             <div>
               <label for="service" id="fServiceLabel">Service Type</label>
-              <select id="service" name="service" required>
-                <option value="" selected disabled>Select…</option>
-                <option>PCB + Hardware Design</option>
-                <option>Power Electronics / BMS</option>
-                <option>Firmware Development</option>
-                <option>Bring-up / Testing / Debug</option>
-                <option>Design Review (Schematic/PCB/DFM)</option>
-                <option>Training / Courses / Workshops</option>
-                <option>Other</option>
+              <select id="service" name="service">
+                <option>PCB & Hardware Design</option>
+                <option>Power Electronics & Battery</option>
+                <option>Firmware + Bring-Up + Testing</option>
+                <option>Training / Workshop</option>
+                <option>Design Review & Debug Support</option>
               </select>
             </div>
 
             <div>
               <label for="budget" id="fBudgetLabel">Budget Range</label>
               <select id="budget" name="budget">
-                <option value="" selected disabled>Select…</option>
-                <option>$500 – $1,000</option>
-                <option>$1,000 – $3,000</option>
-                <option>$3,000 – $7,000</option>
-                <option>$7,000+</option>
+                <option>Not specified yet</option>
+                <option>&lt; €2,000</option>
+                <option>€2,000 – €5,000</option>
+                <option>€5,000 – €10,000</option>
+                <option>€10,000+</option>
               </select>
             </div>
 
             <div class="full">
-              <label for="details" id="fDetailsLabel">Project Details</label>
-              <textarea
-                id="details"
-                name="details"
-                placeholder="Tell me what you need: project purpose, interfaces, constraints, PCB layers, power, deadlines, or training needs (beginner/advanced, individuals/team, online/onsite)…"
-                required
-              ></textarea>
+              <label for="timeline" id="fTimelineLabel">Timeline</label>
+              <input id="timeline" name="timeline" placeholder="e.g., start in 2 weeks / urgent / flexible" />
             </div>
 
             <div class="full">
-              <label for="timeline" id="fTimelineLabel">Target Timeline</label>
-              <input id="timeline" name="timeline" placeholder="e.g., First prototype in 3 weeks / 4-week advanced workshop" />
+              <label for="details" id="fDetailsLabel">Project Details</label>
+              <textarea id="details" name="details" placeholder="Describe your product, requirements, constraints, and current stage."></textarea>
             </div>
           </div>
 
           <div class="form-actions">
-            <button class="btn primary" type="submit" id="sendBtn">
-              <span id="sendBtnText">Send Request</span> <span aria-hidden="true">→</span>
+            <button class="btn success" type="submit">
+              <span id="sendBtnText">Prepare Message</span>
             </button>
-            <button class="btn" type="button" id="copyBtn">
+            <button class="btn" type="button" onclick="copyPreparedText()">
               <span id="copyBtnText">Copy Message</span>
             </button>
           </div>
 
-          <div class="toast" id="toastOk">Done — message copied and email draft opened.</div>
-          <div class="toast err" id="toastErr">Could not open email app. Message copied — paste it into your email.</div>
+          <p class="hint" id="formHint">This form prepares a clean message you can send by email or WhatsApp.</p>
+          <div class="toast" id="toast">Message copied.</div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="wrap foot">
       <div>
-        <div style="display:flex; gap:10px; align-items:center;">
-          <span class="dot"></span>
-          <strong id="footTitle">Embedded & Electronics Engineer</strong>
-        </div>
-        <div id="footSub">Production-ready PCB + Firmware • Bring-up • Testing • Manufacturing support</div>
+        <strong id="footTitle">Abdelrahman Elhawary</strong><br />
+        <span id="footSub">Embedded & Electronics Engineer</span>
       </div>
-
       <div class="mini">
         <a href="#services" id="footServices">Services</a>
         <a href="#training" id="footTraining">Training</a>
         <a href="#projects" id="footProjects">Projects</a>
         <a href="#contact" id="footRequest">Request</a>
       </div>
-
-      <div class="mini" id="socialLinks">
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">GitHub</a>
-        <a href="#" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" target="_blank" rel="noopener">YouTube</a>
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
-        <a href="#" target="_blank" rel="noopener">X (Twitter)</a>
-        <a href="#" target="_blank" rel="noopener">TikTok</a>
-      </div>
     </div>
   </footer>
 
   <script>
-    // ========= CONFIG =========
-    const DEST_EMAIL = "YOUR_EMAIL_HERE@example.com";
+    let preparedMessage = "";
 
-    // ========= Language content =========
-    const T = {
+    const translations = {
       en: {
         navBrand: "Embedded & Electronics Engineer",
         navServices: "Services",
+        navVideo: "Video",
         navTraining: "Training",
         navProjects: "Projects",
         navCred: "Credentials",
@@ -930,67 +961,38 @@
         pill3b: "Reliability • EMI/EMC • DFM/DFA",
 
         heroTitle: "Embedded & Electronics Engineering for Production-Ready Systems",
-        heroLead:
-          "I deliver reliable embedded hardware solutions — from concept and schematic design to PCB layout, firmware, bring-up, testing, and manufacturing support. Built for real-world constraints, not just prototypes.",
-
+        heroLead: "I deliver reliable embedded hardware solutions — from concept and schematic design to PCB layout, firmware, bring-up, testing, and manufacturing support. Built for real-world constraints, not just prototypes.",
         btnRequestText: "Request a Quote / Consultation",
         btnSeeWorkText: "See Work",
-
+        kpi1: "6+ years experience",
+        kpi2: "PCB 2–8 layers",
+        kpi3: "C / C++ / RTOS",
+        kpi4: "Bring-up & Testing",
         pName: "Abdelrahman — Embedded & Electronics Engineer",
         pSub: "PCB Design • Power Electronics • Firmware • Bring-up & Production Support",
         meta3: "Automotive • Industrial • IoT",
-
         boxFastTitle: "Fast start, clear deliverables",
-        boxFastText:
-          "You get a structured handover package: schematic + PCB + BOM + manufacturing files, firmware repo, bring-up notes, and test results — ready for production.",
+        boxFastText: "You get a structured handover package: schematic + PCB + BOM + manufacturing files, firmware repo, bring-up notes, and test results — ready for production.",
+
+        videoTitle: "Short Introduction Video",
+        videoNote: "A quick way to build trust and show how you communicate technically.",
+        videoBoxTitle: "What this video should cover",
+        videoBoxText: "Keep it short and direct: who you are, what you build, the kind of clients you help, and why your work is production-ready.",
+        videoPoint1: "30–60 sec",
+        videoPoint2: "German or English",
+        videoPoint3: "Clear audio",
+        videoPoint4: "Professional background",
+        videoList: [
+          "Say your name and specialty in the first 5 seconds.",
+          "Mention PCB design, firmware, bring-up, and production support.",
+          "Speak naturally and confidently — no need for long details.",
+          "End with a simple call to action: contact me for your project."
+        ],
 
         servicesTitle: "Core Services",
         servicesNote: "Specialized embedded electronics — focused, reliable, production-ready.",
-        svc1t: "PCB & Hardware Design",
-        svc1l: [
-          "2–8 layer PCB layout, EMI/EMC-aware routing",
-          "High-current & power distribution",
-          "Schematic design & component selection",
-          "Manufacturing outputs: BOM, Gerbers, Pick&Place"
-        ],
-        svc2t: "Power Electronics & Battery",
-        svc2l: [
-          "Buck/Boost/LDO design & validation",
-          "Battery monitoring, protection, current sensing",
-          "Thermal and safety-oriented design choices",
-          "Noise/ripple control and robust power-up behavior"
-        ],
-        svc3t: "Firmware + Bring-Up + Testing",
-        svc3l: [
-          "Embedded C/C++ (bare-metal, RTOS basics)",
-          "Drivers: SPI, I2C, UART, CAN",
-          "SWD/JTAG debugging, oscilloscope/logic analyzer",
-          "Bring-up checklist, test plan, production support"
-        ],
-
         trainingTitle: "Training, Courses & Workshops",
         trainingNote: "Practical training in embedded systems and electronics for beginners, advanced learners, teams, and professionals.",
-        tr1t: "Beginner Training Track",
-        tr1l: [
-          "Introduction to embedded systems and electronics",
-          "Basic electronics: voltage, current, resistors, capacitors, diodes, transistors",
-          "Microcontroller fundamentals and simple embedded C programming",
-          "GPIO, UART, basic sensors, and first hardware projects"
-        ],
-        tr2t: "Advanced Training Track",
-        tr2l: [
-          "Advanced embedded C/C++, architecture, optimization, and debugging",
-          "RTOS concepts, task design, memory handling, and real-time behavior",
-          "Drivers and interfaces: SPI, I2C, UART, CAN, interrupts, timers, DMA",
-          "PCB design best practices, EMI/EMC, power integrity, bring-up, and test workflows"
-        ],
-        tr3t: "Custom Courses & Workshops",
-        tr3l: [
-          "Tailored workshops for companies, engineering teams, and universities",
-          "Project-based training with practical examples and real debugging sessions",
-          "Hands-on learning using oscilloscope, logic analyzer, and real boards",
-          "Available online or onsite depending on scope and location"
-        ],
         trainingBoxTitle: "Who this training is for",
         trainingBoxText: "Ideal for beginners who want a strong foundation, advanced engineers who want deeper embedded and electronics expertise, and companies that need practical, results-oriented technical training.",
         trainingFormatTitle: "Training Formats",
@@ -998,48 +1000,14 @@
 
         processTitle: "How We Work",
         processNote: "Simple process. Clear milestones. Predictable delivery.",
-        p1t: "1) Requirements & Architecture",
-        p1p: "We align on requirements, constraints (cost, size, power, compliance), and define interfaces and test criteria.",
-        p2t: "2) Schematic + Design Review",
-        p2p: "Schematic design, component selection, and review for reliability, safety, and manufacturability.",
-        p3t: "3) PCB Layout + Manufacturing Package",
-        p3p: "Layout, DRC/DFM checks, then delivery of Gerbers, BOM, Pick&Place, and assembly notes.",
-        p4t: "4) Firmware + Bring-Up + Testing",
-        p4p: "Firmware drivers, hardware bring-up, debugging, and test report. Support through production issues if needed.",
-
         projectsTitle: "Selected Project Types",
         projectsNote: "Representative examples — can be adapted to your product.",
-        pr1t: "Industrial Sensor Interface Board",
-        pr1p: "Low-noise sensing, robust filtering, and industrial comms with validation and test notes for field reliability.",
-        pr2t: "Power & Battery Management Board",
-        pr2p: "Power tree design, current sensing, protections, and EMI-aware layout suitable for production constraints.",
-        pr3t: "Embedded Controller (MCU + I/O)",
-        pr3p: "MCU board + firmware drivers, logs, error handling, and structured bring-up process with test checklist.",
-        pr4t: "Automotive ECU Prototype",
-        pr4p: "Automotive-grade concepts: protections, diagnostics, stable clocks/resets, plus board-level testing strategy.",
-        pr5t: "IoT Edge Device Hardware",
-        pr5p: "Connected device hardware with practical considerations for production, serviceability, and field debugging.",
-        pr6t: "Design Review & Debug Support",
-        pr6p: "Schematic/PCB review, bring-up plan, and deep debugging to fix issues fast and reduce production risk.",
-
         testTitle: "Client Feedback Style",
-        q1: "Clear communication, professional deliverables, and strong debugging skills. The board worked on first power-up with solid test documentation.",
-        q1b: "— Embedded Product Client",
-        q2: "Excellent PCB layout quality and EMI-conscious routing. Manufacturing package was complete and saved our team days.",
-        q2b: "— Hardware Lead",
-        q3: "Reliable firmware integration and pragmatic engineering decisions. Great focus on safety and production readiness.",
-        q3b: "— Industrial Systems Client",
-
         credTitle: "Credentials",
         credNote: "Focused on embedded electronics — complementary skills support end-to-end delivery.",
         eduTitle: "Education",
-        eduList: [
-          "Dipl.-Ing (HTW Dresden) — Part-time (Teilzeit), expected 2030",
-          "B.Sc. in Software Engineering — Completed"
-        ],
         compTitle: "Complementary (Used When Needed)",
-        compText:
-          "Networking, cybersecurity, and cloud connectivity can be applied when your embedded product requires secure communication, logging, monitoring, or IoT integration — without shifting focus away from embedded electronics delivery.",
+        compText: "Networking, cybersecurity, and cloud connectivity can be applied when your embedded product requires secure communication, logging, monitoring, or IoT integration — without shifting focus away from embedded electronics delivery.",
 
         contactTitle: "Request a Quote / Consultation",
         contactNote: "Send details — I’ll respond with questions, timeline, and a structured plan.",
@@ -1049,13 +1017,14 @@
         fCountryLabel: "Country",
         fServiceLabel: "Service Type",
         fBudgetLabel: "Budget Range",
+        fTimelineLabel: "Timeline",
         fDetailsLabel: "Project Details",
-        fTimelineLabel: "Target Timeline",
-        sendBtnText: "Send Request",
+        sendBtnText: "Prepare Message",
         copyBtnText: "Copy Message",
+        formHint: "This form prepares a clean message you can send by email or WhatsApp.",
 
-        footTitle: "Embedded & Electronics Engineer",
-        footSub: "Production-ready PCB + Firmware • Bring-up • Testing • Manufacturing support",
+        footTitle: "Abdelrahman Elhawary",
+        footSub: "Embedded & Electronics Engineer",
         footServices: "Services",
         footTraining: "Training",
         footProjects: "Projects",
@@ -1065,6 +1034,7 @@
       de: {
         navBrand: "Embedded- & Elektronikingenieur",
         navServices: "Leistungen",
+        navVideo: "Video",
         navTraining: "Training",
         navProjects: "Projekte",
         navCred: "Qualifikationen",
@@ -1077,133 +1047,70 @@
         pill3b: "Zuverlässigkeit • EMV • DFM/DFA",
 
         heroTitle: "Embedded- & Elektronikentwicklung für serienreife Systeme",
-        heroLead:
-          "Ich liefere zuverlässige Embedded-Hardwarelösungen — von Konzept und Schaltplan über PCB-Layout bis Firmware, Inbetriebnahme, Tests und Fertigungsunterstützung. Entwickelt für reale Randbedingungen, nicht nur Prototypen.",
-
+        heroLead: "Ich liefere zuverlässige Embedded-Hardwarelösungen — von Konzept und Schaltplan über PCB-Layout und Firmware bis zu Bring-up, Tests und Fertigungsunterstützung. Für reale Anforderungen, nicht nur für Prototypen.",
         btnRequestText: "Angebot / Beratung anfragen",
         btnSeeWorkText: "Arbeiten ansehen",
-
+        kpi1: "6+ Jahre Erfahrung",
+        kpi2: "PCB 2–8 Lagen",
+        kpi3: "C / C++ / RTOS",
+        kpi4: "Bring-up & Tests",
         pName: "Abdelrahman — Embedded- & Elektronikingenieur",
-        pSub: "PCB-Design • Leistungselektronik • Firmware • Inbetriebnahme & Produktionssupport",
+        pSub: "PCB-Design • Leistungselektronik • Firmware • Bring-up & Produktionssupport",
         meta3: "Automotive • Industrie • IoT",
-
         boxFastTitle: "Schneller Start, klare Deliverables",
-        boxFastText:
-          "Sie erhalten ein strukturiertes Handover-Paket: Schaltplan + PCB + BOM + Fertigungsdaten, Firmware-Repo, Bring-up-Notizen und Testergebnisse — bereit für die Serie.",
+        boxFastText: "Sie erhalten ein strukturiertes Übergabepaket: Schaltplan + PCB + BOM + Fertigungsdaten, Firmware-Repo, Bring-up-Notizen und Testergebnisse — bereit für die Produktion.",
+
+        videoTitle: "Kurzes Vorstellungsvideo",
+        videoNote: "Ein schneller Weg, Vertrauen aufzubauen und technische Kommunikation zu zeigen.",
+        videoBoxTitle: "Was das Video enthalten sollte",
+        videoBoxText: "Kurz und direkt: wer Sie sind, was Sie entwickeln, für welche Kunden Sie arbeiten und warum Ihre Arbeit serienreif ist.",
+        videoPoint1: "30–60 Sek.",
+        videoPoint2: "Deutsch oder Englisch",
+        videoPoint3: "Klare Audioqualität",
+        videoPoint4: "Professioneller Hintergrund",
+        videoList: [
+          "Nennen Sie in den ersten 5 Sekunden Ihren Namen und Ihre Spezialisierung.",
+          "Erwähnen Sie PCB-Design, Firmware, Bring-up und Produktionssupport.",
+          "Sprechen Sie natürlich und souverän — ohne unnötig lange Details.",
+          "Beenden Sie mit einer klaren Handlungsaufforderung: Kontaktieren Sie mich für Ihr Projekt."
+        ],
 
         servicesTitle: "Kernleistungen",
         servicesNote: "Spezialisierte Embedded-Elektronik — fokussiert, zuverlässig, serienreif.",
-        svc1t: "PCB- & Hardware-Design",
-        svc1l: [
-          "PCB-Layout (2–8 Lagen), EMV-bewusstes Routing",
-          "Hochstrom- & Power-Distribution",
-          "Schaltplanentwicklung & Bauteilauswahl",
-          "Fertigungsdaten: BOM, Gerber, Pick&Place"
-        ],
-        svc2t: "Leistungselektronik & Batterie",
-        svc2l: [
-          "Buck/Boost/LDO-Design & Validierung",
-          "Batterieüberwachung, Schutz, Strommessung",
-          "Thermik- und sicherheitsorientierte Entscheidungen",
-          "Rausch-/Ripple-Optimierung & robustes Power-up"
-        ],
-        svc3t: "Firmware + Inbetriebnahme + Tests",
-        svc3l: [
-          "Embedded C/C++ (Bare-Metal, RTOS-Grundlagen)",
-          "Treiber: SPI, I2C, UART, CAN",
-          "SWD/JTAG-Debugging, Oszilloskop/Logic-Analyzer",
-          "Bring-up-Checkliste, Testplan, Produktionssupport"
-        ],
-
         trainingTitle: "Trainings, Kurse & Workshops",
         trainingNote: "Praxisnahe Schulungen in Embedded Systems und Elektronik für Anfänger, Fortgeschrittene, Teams und Fachkräfte.",
-        tr1t: "Einsteiger-Training",
-        tr1l: [
-          "Einführung in Embedded Systems und Elektronik",
-          "Grundlagen der Elektronik: Spannung, Strom, Widerstände, Kondensatoren, Dioden, Transistoren",
-          "Mikrocontroller-Grundlagen und einfaches Embedded-C-Programming",
-          "GPIO, UART, einfache Sensoren und erste Hardware-Projekte"
-        ],
-        tr2t: "Fortgeschrittenen-Training",
-        tr2l: [
-          "Fortgeschrittenes Embedded C/C++, Architektur, Optimierung und Debugging",
-          "RTOS-Konzepte, Task-Design, Speicherverwaltung und Echtzeitverhalten",
-          "Treiber und Schnittstellen: SPI, I2C, UART, CAN, Interrupts, Timer, DMA",
-          "PCB-Best-Practices, EMV, Power Integrity, Bring-up und Test-Workflows"
-        ],
-        tr3t: "Individuelle Kurse & Workshops",
-        tr3l: [
-          "Maßgeschneiderte Workshops für Unternehmen, Engineering-Teams und Hochschulen",
-          "Projektbasiertes Lernen mit Praxisbeispielen und echten Debugging-Sessions",
-          "Hands-on-Training mit Oszilloskop, Logic Analyzer und realen Boards",
-          "Online oder vor Ort je nach Umfang und Standort verfügbar"
-        ],
-        trainingBoxTitle: "Für wen ist dieses Training geeignet?",
+        trainingBoxTitle: "Für wen dieses Training geeignet ist",
         trainingBoxText: "Ideal für Anfänger mit Bedarf an einer starken Grundlage, für erfahrene Ingenieure mit Wunsch nach tieferem Embedded- und Elektronik-Know-how sowie für Unternehmen, die praxisnahe technische Schulungen benötigen.",
         trainingFormatTitle: "Trainingsformate",
         trainingFormatText: "Einzel-Mentoring, Gruppenkurse, Firmenworkshops, projektbasierte Sessions und individuelle Lernpfade für Embedded Systems, Firmware, Elektronik, PCB-Design und Debugging.",
 
         processTitle: "Arbeitsweise",
         processNote: "Einfacher Prozess. Klare Meilensteine. Planbare Lieferung.",
-        p1t: "1) Anforderungen & Architektur",
-        p1p:
-          "Wir klären Anforderungen, Randbedingungen (Kosten, Größe, Leistung, Compliance) und definieren Schnittstellen sowie Testkriterien.",
-        p2t: "2) Schaltplan + Design Review",
-        p2p: "Schaltplan, Bauteilauswahl und Review mit Fokus auf Zuverlässigkeit, Sicherheit und Fertigungstauglichkeit.",
-        p3t: "3) PCB-Layout + Fertigungspaket",
-        p3p: "Layout, DRC/DFM-Checks, anschließend Lieferung von Gerbern, BOM, Pick&Place und Assembly-Notizen.",
-        p4t: "4) Firmware + Bring-up + Tests",
-        p4p: "Firmware-Treiber, Inbetriebnahme, Debugging und Testbericht. Unterstützung bei Produktionsproblemen nach Bedarf.",
-
         projectsTitle: "Beispielhafte Projekttypen",
         projectsNote: "Repräsentative Beispiele — an Ihr Produkt anpassbar.",
-        pr1t: "Industrie-Sensor-Interface",
-        pr1p: "Rauscharme Messung, robustes Filtern und Industrie-Kommunikation inkl. Validierung und Testdokumentation.",
-        pr2t: "Power- & Batteriemanagement",
-        pr2p: "Power-Tree-Design, Strommessung, Schutzbeschaltungen und EMV-bewusstes Layout für Serienanforderungen.",
-        pr3t: "Embedded Controller (MCU + I/O)",
-        pr3p: "MCU-Board + Firmware-Treiber, Logs, Fehlerbehandlung und strukturierter Bring-up mit Testcheckliste.",
-        pr4t: "Automotive ECU Prototyp",
-        pr4p: "Automotive-orientiert: Schutz, Diagnose, stabile Clocks/Resets sowie Board-Level-Teststrategie.",
-        pr5t: "IoT Edge Device Hardware",
-        pr5p: "Connected-Device-Hardware mit Fokus auf Fertigung, Wartbarkeit und Field-Debugging.",
-        pr6t: "Design Review & Debug Support",
-        pr6p: "Schaltplan/PCB-Review, Bring-up-Plan und tiefes Debugging zur schnellen Fehlerbehebung und Risikoreduzierung.",
-
         testTitle: "Feedback-Stil",
-        q1: "Klare Kommunikation, professionelle Deliverables und starkes Debugging. Das Board lief beim ersten Power-up mit sauberer Testdoku.",
-        q1b: "— Embedded Produktkunde",
-        q2: "Sehr hohe PCB-Layout-Qualität und EMV-bewusstes Routing. Fertigungspaket war vollständig und sparte uns Tage.",
-        q2b: "— Hardware Lead",
-        q3: "Zuverlässige Firmware-Integration und pragmatische Engineering-Entscheidungen. Starker Fokus auf Sicherheit und Serienreife.",
-        q3b: "— Industriekunde",
-
         credTitle: "Qualifikationen",
-        credNote: "Fokus auf Embedded-Elektronik — ergänzende Skills unterstützen End-to-End-Lieferung.",
+        credNote: "Fokus auf Embedded-Elektronik — ergänzende Skills unterstützen die End-to-End-Lieferung.",
         eduTitle: "Ausbildung",
-        eduList: [
-          "Dipl.-Ing (HTW Dresden) — Teilzeit, voraussichtlicher Abschluss 2030",
-          "B.Sc. Software Engineering — abgeschlossen"
-        ],
         compTitle: "Ergänzend (bei Bedarf)",
-        compText:
-          "Networking, Cybersecurity und Cloud-Konnektivität nutze ich, wenn Ihr Embedded-Produkt sichere Kommunikation, Logging/Monitoring oder IoT-Integration benötigt — ohne den Fokus von Embedded-Elektronik zu verschieben.",
+        compText: "Netzwerk-, Cybersecurity- und Cloud-Know-how kann eingesetzt werden, wenn Ihr Embedded-Produkt sichere Kommunikation, Logging, Monitoring oder IoT-Integration benötigt — ohne den Fokus von der Embedded-Elektronik wegzunehmen.",
 
         contactTitle: "Angebot / Beratung anfragen",
-        contactNote: "Senden Sie Details — ich antworte mit Rückfragen, Zeitplan und einem strukturierten Vorgehen.",
+        contactNote: "Senden Sie die Eckdaten — ich antworte mit Rückfragen, Zeitplan und einem strukturierten Vorschlag.",
         fNameLabel: "Name",
         fEmailLabel: "E-Mail",
-        fCompanyLabel: "Firma (optional)",
+        fCompanyLabel: "Unternehmen (optional)",
         fCountryLabel: "Land",
-        fServiceLabel: "Leistung",
+        fServiceLabel: "Leistungsart",
         fBudgetLabel: "Budget",
-        fDetailsLabel: "Projektbeschreibung",
-        fTimelineLabel: "Ziel-Zeitplan",
-        sendBtnText: "Anfrage senden",
+        fTimelineLabel: "Zeitplan",
+        fDetailsLabel: "Projektdetails",
+        sendBtnText: "Nachricht vorbereiten",
         copyBtnText: "Nachricht kopieren",
+        formHint: "Dieses Formular erstellt eine saubere Nachricht für E-Mail oder WhatsApp.",
 
-        footTitle: "Embedded- & Elektronikingenieur",
-        footSub: "Serienreife PCB + Firmware • Bring-up • Tests • Fertigungsunterstützung",
+        footTitle: "Abdelrahman Elhawary",
+        footSub: "Embedded- & Elektronikingenieur",
         footServices: "Leistungen",
         footTraining: "Training",
         footProjects: "Projekte",
@@ -1212,134 +1119,34 @@
     };
 
     function setLang(lang){
-      document.getElementById("btnEN").classList.toggle("active", lang==="en");
-      document.getElementById("btnDE").classList.toggle("active", lang==="de");
+      const t = translations[lang];
+      document.documentElement.lang = lang;
+      document.getElementById("btnEN").classList.toggle("active", lang === "en");
+      document.getElementById("btnDE").classList.toggle("active", lang === "de");
 
-      const t = T[lang];
+      const mapText = [
+        "navBrand","navServices","navVideo","navTraining","navProjects","navCred","navContact",
+        "pill1","pill2","pill2b","pill3","pill3b","heroTitle","heroLead","btnRequestText","btnSeeWorkText",
+        "kpi1","kpi2","kpi3","kpi4","pName","pSub","meta3","boxFastTitle","boxFastText",
+        "videoTitle","videoNote","videoBoxTitle","videoBoxText","videoPoint1","videoPoint2","videoPoint3","videoPoint4",
+        "servicesTitle","servicesNote","trainingTitle","trainingNote","trainingBoxTitle","trainingBoxText",
+        "trainingFormatTitle","trainingFormatText","processTitle","processNote","projectsTitle","projectsNote",
+        "testTitle","credTitle","credNote","eduTitle","compTitle","compText",
+        "contactTitle","contactNote","fNameLabel","fEmailLabel","fCompanyLabel","fCountryLabel","fServiceLabel",
+        "fBudgetLabel","fTimelineLabel","fDetailsLabel","sendBtnText","copyBtnText","formHint",
+        "footTitle","footSub","footServices","footTraining","footProjects","footRequest"
+      ];
+      mapText.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && t[id] !== undefined) el.textContent = t[id];
+      });
 
-      // Topbar
-      document.getElementById("navBrand").textContent = t.navBrand;
-      document.getElementById("navServices").textContent = t.navServices;
-      document.getElementById("navTraining").textContent = t.navTraining;
-      document.getElementById("navProjects").textContent = t.navProjects;
-      document.getElementById("navCred").textContent = t.navCred;
-      document.getElementById("navContact").textContent = t.navContact;
-
-      // Pills
-      document.getElementById("pill1").textContent = t.pill1;
-      document.getElementById("pill2").textContent = t.pill2;
-      document.getElementById("pill2b").textContent = t.pill2b;
-      document.getElementById("pill3").textContent = t.pill3;
-      document.getElementById("pill3b").textContent = t.pill3b;
-
-      // Hero
-      document.getElementById("heroTitle").textContent = t.heroTitle;
-      document.getElementById("heroLead").textContent = t.heroLead;
-      document.getElementById("btnRequestText").textContent = t.btnRequestText;
-      document.getElementById("btnSeeWorkText").textContent = t.btnSeeWorkText;
-
-      // Profile
-      document.getElementById("pName").textContent = t.pName;
-      document.getElementById("pSub").textContent = t.pSub;
-      document.getElementById("meta3").textContent = t.meta3;
-
-      // Box
-      document.getElementById("boxFastTitle").textContent = t.boxFastTitle;
-      document.getElementById("boxFastText").textContent = t.boxFastText;
-
-      // Services
-      document.getElementById("servicesTitle").textContent = t.servicesTitle;
-      document.getElementById("servicesNote").textContent = t.servicesNote;
-      document.getElementById("svc1t").textContent = t.svc1t;
-      document.getElementById("svc2t").textContent = t.svc2t;
-      document.getElementById("svc3t").textContent = t.svc3t;
-      document.getElementById("svc1l").innerHTML = t.svc1l.map(x=>`<li>${x}</li>`).join("");
-      document.getElementById("svc2l").innerHTML = t.svc2l.map(x=>`<li>${x}</li>`).join("");
-      document.getElementById("svc3l").innerHTML = t.svc3l.map(x=>`<li>${x}</li>`).join("");
-
-      // Training
-      document.getElementById("trainingTitle").textContent = t.trainingTitle;
-      document.getElementById("trainingNote").textContent = t.trainingNote;
-      document.getElementById("tr1t").textContent = t.tr1t;
-      document.getElementById("tr2t").textContent = t.tr2t;
-      document.getElementById("tr3t").textContent = t.tr3t;
-      document.getElementById("tr1l").innerHTML = t.tr1l.map(x=>`<li>${x}</li>`).join("");
-      document.getElementById("tr2l").innerHTML = t.tr2l.map(x=>`<li>${x}</li>`).join("");
-      document.getElementById("tr3l").innerHTML = t.tr3l.map(x=>`<li>${x}</li>`).join("");
-      document.getElementById("trainingBoxTitle").textContent = t.trainingBoxTitle;
-      document.getElementById("trainingBoxText").textContent = t.trainingBoxText;
-      document.getElementById("trainingFormatTitle").textContent = t.trainingFormatTitle;
-      document.getElementById("trainingFormatText").textContent = t.trainingFormatText;
-
-      // Process
-      document.getElementById("processTitle").textContent = t.processTitle;
-      document.getElementById("processNote").textContent = t.processNote;
-      document.getElementById("p1t").textContent = t.p1t;
-      document.getElementById("p1p").textContent = t.p1p;
-      document.getElementById("p2t").textContent = t.p2t;
-      document.getElementById("p2p").textContent = t.p2p;
-      document.getElementById("p3t").textContent = t.p3t;
-      document.getElementById("p3p").textContent = t.p3p;
-      document.getElementById("p4t").textContent = t.p4t;
-      document.getElementById("p4p").textContent = t.p4p;
-
-      // Projects
-      document.getElementById("projectsTitle").textContent = t.projectsTitle;
-      document.getElementById("projectsNote").textContent = t.projectsNote;
-      document.getElementById("pr1t").textContent = t.pr1t;
-      document.getElementById("pr1p").textContent = t.pr1p;
-      document.getElementById("pr2t").textContent = t.pr2t;
-      document.getElementById("pr2p").textContent = t.pr2p;
-      document.getElementById("pr3t").textContent = t.pr3t;
-      document.getElementById("pr3p").textContent = t.pr3p;
-      document.getElementById("pr4t").textContent = t.pr4t;
-      document.getElementById("pr4p").textContent = t.pr4p;
-      document.getElementById("pr5t").textContent = t.pr5t;
-      document.getElementById("pr5p").textContent = t.pr5p;
-      document.getElementById("pr6t").textContent = t.pr6t;
-      document.getElementById("pr6p").textContent = t.pr6p;
-
-      // Testimonials
-      document.getElementById("testTitle").textContent = t.testTitle;
-      document.getElementById("q1").textContent = t.q1;
-      document.getElementById("q1b").textContent = t.q1b;
-      document.getElementById("q2").textContent = t.q2;
-      document.getElementById("q2b").textContent = t.q2b;
-      document.getElementById("q3").textContent = t.q3;
-      document.getElementById("q3b").textContent = t.q3b;
-
-      // Credentials
-      document.getElementById("credTitle").textContent = t.credTitle;
-      document.getElementById("credNote").textContent = t.credNote;
-      document.getElementById("eduTitle").textContent = t.eduTitle;
-      document.getElementById("eduList").innerHTML = t.eduList.map(x=>`<li>${x}</li>`).join("");
-      document.getElementById("compTitle").textContent = t.compTitle;
-      document.getElementById("compText").textContent = t.compText;
-
-      // Contact
-      document.getElementById("contactTitle").textContent = t.contactTitle;
-      document.getElementById("contactNote").textContent = t.contactNote;
-      document.getElementById("fNameLabel").textContent = t.fNameLabel;
-      document.getElementById("fEmailLabel").textContent = t.fEmailLabel;
-      document.getElementById("fCompanyLabel").textContent = t.fCompanyLabel;
-      document.getElementById("fCountryLabel").textContent = t.fCountryLabel;
-      document.getElementById("fServiceLabel").textContent = t.fServiceLabel;
-      document.getElementById("fBudgetLabel").textContent = t.fBudgetLabel;
-      document.getElementById("fDetailsLabel").textContent = t.fDetailsLabel;
-      document.getElementById("fTimelineLabel").textContent = t.fTimelineLabel;
-      document.getElementById("sendBtnText").textContent = t.sendBtnText;
-      document.getElementById("copyBtnText").textContent = t.copyBtnText;
-
-      // Footer
-      document.getElementById("footTitle").textContent = t.footTitle;
-      document.getElementById("footSub").textContent = t.footSub;
-      document.getElementById("footServices").textContent = t.footServices;
-      document.getElementById("footTraining").textContent = t.footTraining;
-      document.getElementById("footProjects").textContent = t.footProjects;
-      document.getElementById("footRequest").textContent = t.footRequest;
+      const videoList = document.getElementById("videoList");
+      if (videoList && t.videoList) {
+        videoList.innerHTML = t.videoList.map(x => `<li>${x}</li>`).join("");
+      }
     }
 
-    // ========= Contact form behavior =========
     function buildMessage(data){
       const lines = [
         "New Project / Training Request",
@@ -1358,66 +1165,34 @@
       return lines.join("\n");
     }
 
-    async function copyToClipboard(text){
+    async function copyText(text){
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(text);
-        return true;
+      } else {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
       }
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      ta.style.position = "fixed";
-      ta.style.left = "-9999px";
-      document.body.appendChild(ta);
-      ta.focus();
-      ta.select();
-      const ok = document.execCommand("copy");
-      document.body.removeChild(ta);
-      return ok;
+      const toast = document.getElementById("toast");
+      toast.style.display = "block";
+      setTimeout(() => toast.style.display = "none", 1800);
     }
 
-    function showToast(ok=true){
-      const toastOk = document.getElementById("toastOk");
-      const toastErr = document.getElementById("toastErr");
-      toastOk.style.display = ok ? "block" : "none";
-      toastErr.style.display = ok ? "none" : "block";
-      setTimeout(()=>{
-        toastOk.style.display = "none";
-        toastErr.style.display = "none";
-      }, 5000);
+    function copyPreparedText(){
+      if (preparedMessage) copyText(preparedMessage);
     }
 
-    document.getElementById("copyBtn").addEventListener("click", async ()=>{
-      const form = document.getElementById("requestForm");
-      const data = Object.fromEntries(new FormData(form).entries());
-      const msg = buildMessage(data);
-      const ok = await copyToClipboard(msg);
-      showToast(ok);
-    });
-
-    document.getElementById("requestForm").addEventListener("submit", async (e)=>{
+    document.getElementById("requestForm").addEventListener("submit", async function(e){
       e.preventDefault();
-
       const data = Object.fromEntries(new FormData(e.target).entries());
-      const msg = buildMessage(data);
-
-      try { await copyToClipboard(msg); } catch (e) {}
-
-      const subject = encodeURIComponent("Project Request: Embedded / PCB / Firmware / Training");
-      const body = encodeURIComponent(msg);
-
-      if (!DEST_EMAIL || DEST_EMAIL.includes("YOUR_EMAIL_HERE")) {
-        showToast(false);
-        return;
-      }
-
-      const mailto = `mailto:${encodeURIComponent(DEST_EMAIL)}?subject=${subject}&body=${body}`;
-      const w = window.open(mailto, "_blank");
-      if (!w) showToast(false);
-      else showToast(true);
+      preparedMessage = buildMessage(data);
+      await copyText(preparedMessage);
     });
 
-    // Default language
-    setLang("en");
+    setLang('en');
   </script>
 </body>
 </html>
